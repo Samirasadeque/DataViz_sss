@@ -204,28 +204,35 @@
 			/* The biggest refugee population in Burma is the Rohingya population, so it's important to have enough information about them such as where they go, their population and what kinds of abuses they face. */
 
 			var Rohingya_characteristics = {
-			"religion": "Muslim",
-			"region" : "Rakhine",
-			"population" : "One million",
-			"refugees_in_countries" : ["Bangladesh", "Malaysia", "Thailand", "Indonesia"],
-			"Rohingya_refugee_population_in_Bangladesh" : {"refugee_concerns_in_Bangladesh":"terrorism","refugee_numbers_est":500000,"refugee_religion_majority":"Muslim","abuse_type":"rape"},
+				"religion" : "Muslim",
+				"region" : "Rakhine",
+				"population" : "One million",
+				"refugees_in_countries" : ["Bangladesh", "Malaysia", "Thailand", "Indonesia"],
+				"Rohingya_refugee_population_in_Bangladesh" : {
+					"refugee_concerns_in_Bangladesh" : "terrorism",
+					"refugee_numbers_est" : 500000,
+					"refugee_religion_majority" : "Muslim",
+					"abuse_type" : "rape"
+				},
 			};
 
-			/* Here I am going to classify the different links I've used to put together my webpage. There are four of them */
+			/* Here I am going to classify the different links I've used to put together my webpage. There are four of them. */
 
 			var ListofSourcesForMyWebsite = [{
 
 				"NameOfThisSection" : "The world's 'most persecuted': The Rohingyas",
 
-				"TypeOfPublication" : "research",
+				"TypeOfPublication" : "Research",
 
 				"LocationOfPublication" : "http://www.cfr.org/burmamyanmar/rohingya-migrant-crisis/p36651",
 
 				"DateUploaded" : "January 12 2017",
 
-			}, {
+			},
 
-				/* The first thing I want to do is define what section this is because that's the most important part of the page */
+			/* This is about the Karen population and will list the properties of the source of information about this population */
+
+			{
 
 				"NameOfThisSection" : "Karen: An ethnic minority in Burma",
 
@@ -235,9 +242,11 @@
 
 				"DateUploaded" : "April 16 2016",
 
-			}, {
+			},
 
-				/* The first thing I want to do is define what section this is because that's the most important part of the page */
+			/* This is about the Chin refugees and will list the properties of the source of information about this population */
+
+			{
 
 				"NameOfThisSection" : "Plight of the Chin Christians fleeing Burma",
 
@@ -248,7 +257,9 @@
 				"DateUploaded" : "April 19 2010",
 
 			},
-			
+
+			/* This section is about the climate refugees and will list the properties of the source of information about this population */
+
 			{
 
 				"NameOfThisSection" : "Climate refugees of Burma",
@@ -258,28 +269,29 @@
 				"LocationOfPublication" : "https://static1.squarespace.com/static/506c8ea1e4b01d9450dd53f5/t/5845f2e2f7e0ab230f4631cb/1480979178783/2016126+Myanmar.pdf",
 
 				"DateUploaded" : "December 2010",
-			
-			];
-			
+
+			}];
+
 			/* Goal: Go through each item and print a message to the console everytime i want that was p */
-			
-			for (var counter = 0;counter < ListofSourcesForMyWebsite.length; counter++) {
-				
-				/* Check if the type of publication is "Article" 
+
+			for (var counter = 0; counter < ListofSourcesForMyWebsite.length; counter++) {
+
+				/* Check if the type of publication is "Article"
 				 * If it is, then print the object.
 				 * If not, print "not article"	 */
-				
+
 				var currentSource = ListofSourcesForMyWebsite[counter];
-				
-				if (currentSource.TypeOfPublication == "Article")
-					 
-				
-		
+
+				if (currentSource.TypeOfPublication == "Article") {
+					console.log(currentSource);
+				} else {
+					console.log("not article");
+				}
+
 			}
-			console.log("loop is done") 
- 
-			console.log("Rohingya_characteristics");
-			console.log("region");   
+
+			console.log("This is the end of the loop!");
+
 
 		</script>
 	</body>
