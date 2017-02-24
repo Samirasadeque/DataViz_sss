@@ -12,18 +12,24 @@
       /* Load the Visualization API and the corechart package.*/
       google.charts.load('current', {'packages':['corechart']});
 
-      // Set a callback to run when the Google Visualization API is loaded.
+      // Set a command "Load" that runs only when the Google Visualization API is loaded. This might be an issue when the page is loading
+      // but we will take care of it when we face the issue. 
       google.charts.setOnLoadCallback(drawChart);
 
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
+      // "Load" command will create and populates the bar chart,
+      // gives it proper measurement and features 
+      // and adds the provided information in it.
       function drawChart() {
 
-        // Create the data table.
+        // Create the data table. 
+        // Our purpose is to make the visualization as easy on the viewer's eye as possible. 
+        // So we must make sure it's in the simplest form possible. Keep the bars in one color.
+        // Make sure the list is in a descending order.
+        // Make sure the bar chart is big enough for the readers to be able to read the numbers. 
+        
         var InfoOnMynRefg = new google.visualization.DataTable();
-        InfoOnMynRefg.addColumn('string', 'Topping');
-        InfoOnMynRefg.addColumn('number', 'Est. of smuggled refugees');
+        InfoOnMynRefg.addColumn('string', 'Countries hosting smuggled refugees');
+        InfoOnMynRefg.addColumn('number', 'Number (est.) of smuggled refugees');
         InfoOnMynRefg.addRows([
           ['Thailand', 500000],
           ['Bangladesh', 230000],
@@ -38,22 +44,26 @@
           ['Cambodia', 50]
         ]);
 
-        // This is where we 
+        // This is where we decide the features of the chart. 700px is a good enough size for the eyes. 
+        // The title is self-explanatory. I'm wondering if we should make the title more news-y
+        // but I'm not sure. What do you think? I quite like it this way. 
         
         var ChartFeatures = {'title':'Myanmarese smuggled migrants/refugees by country, 2013',
                        'width':700,
                        'height':525};
 
-        // This is where we create our bar chart, and add the values 
-        // Needs a <div> as ingredient 
+        // This is where we create our bar chart, and add the values. 
+        // Naming my variable BarChartMynRefg because it literally sums up the entire chart, and thus easy to remember. 
+        // Keeping the chart blue in color - it complements the rest of the page as well.  
+         
         var BarChartMynRefg = new google.visualization.BarChart(document.getElementById('BlueBarChart'));
         /* Command: Chart should execute itself, using the "data" that has been defined above 
-         * and the "options" object above. This contains the features of the bar chart.
-         */
+         * as "InfoOnMynRefg" and the "ChartFeatures" object above. This contains the features of the bar chart */
+  
         
         BarChartMynRefg.draw(InfoOnMynRefg, ChartFeatures);
         
-        /* This is where the bar chart function ends. */
+        /* This is where the bar chart ends. */
         
       }
     </script>
@@ -78,13 +88,15 @@
 
 			</div>
 			
-			
+			<!-- It's important to add the div chart here! Also remember to add a caption to the 
+				chart and give credit to the news organization you got the information from. -->  
+				
 	 <div id="BlueBarChart"></div>
 	 <div class="Outline">
 	 <div class="Captions">
 					This chart shows the thousands of Myanmarese smuggled refugees and migrants in different countries across southeast Asia in 2013
 					<br>
-					Source: Foreign Policy Magazine </br>
+					Data source: Foreign Policy Magazine </br>
 				</div>
 			</div>
 	 
