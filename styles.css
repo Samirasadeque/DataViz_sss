@@ -1,0 +1,25 @@
+/* Let's keep the webpage in a column format */
+.Subheads {
+	font-size: 18pt;
+	font-family: Georgia;
+}
+.Text {
+	font-family: Georgia;
+}
+.Captions {
+	font-size: 10pt;
+	font-family: Arial;
+	font-style: italic;
+}
+img {
+	max-width: 100%;
+}
+.Outline {
+	width: 700px;
+}
+
+#chart_div{
+	width: 700px;
+	height: 525px;
+	background-color: #eeeeee;
+}
