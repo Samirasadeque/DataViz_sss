@@ -21,10 +21,10 @@
       function drawChart() {
 
         // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Est. of smuggled refugees');
-        data.addRows([
+        var InfoOnMynRefg = new google.visualization.DataTable();
+        InfoOnMynRefg.addColumn('string', 'Topping');
+        InfoOnMynRefg.addColumn('number', 'Est. of smuggled refugees');
+        InfoOnMynRefg.addRows([
           ['Thailand', 500000],
           ['Bangladesh', 230000],
           ['Pakistan', 100000],
@@ -40,18 +40,18 @@
 
         // This is where we 
         
-        var options = {'title':'Myanmarese smuggled migrants/refugees by country, 2013',
+        var ChartFeatures = {'title':'Myanmarese smuggled migrants/refugees by country, 2013',
                        'width':700,
                        'height':525};
 
         // This is where we create our bar chart, and add the values 
         // Needs a <div> as ingredient 
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        var BarChartMynRefg = new google.visualization.BarChart(document.getElementById('BlueBarChart'));
         /* Command: Chart should execute itself, using the "data" that has been defined above 
          * and the "options" object above. This contains the features of the bar chart.
          */
         
-        chart.draw(data, options);
+        BarChartMynRefg.draw(InfoOnMynRefg, ChartFeatures);
         
         /* This is where the bar chart function ends. */
         
@@ -79,7 +79,7 @@
 			</div>
 			
 			
-	 <div id="chart_div"></div>
+	 <div id="BlueBarChart"></div>
 	 <div class="Outline">
 	 <div class="Captions">
 					This chart shows the thousands of Myanmarese smuggled refugees and migrants in different countries across southeast Asia in 2013
