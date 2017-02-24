@@ -4,32 +4,66 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Burmese Refugees</title>
-		<style>
-			/* Let's keep the webpage in a column format */
-			.Subheads {
-				font-size: 18pt;
-				font-family: Georgia;
-			}
-			.Text {
-				font-family: Georgia;
-			}
-			.Captions {
-				font-size: 10pt;
-				font-family: Arial;
-				font-style: italic;
-			}
-			img {
-				max-width: 100%;
-			}
-			.Outline {
-				width: 700px;
-			}
-		</style>
+		<link rel="stylesheet" href="styles.css" />
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      /* Load the Visualization API and the corechart package.*/
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Est. of smuggled refugees');
+        data.addRows([
+          ['Thailand', 500000],
+          ['Bangladesh', 230000],
+          ['Pakistan', 100000],
+          ['Malaysia', 80000],
+          ['India', 40000],
+          ['Japan', 10500],
+          ['Indonesia', 1500],
+          ['Australia', 600],
+          ['South Korea', 200],
+          ['Nepal', 50],
+          ['Cambodia', 50]
+        ]);
+
+        // This is where we 
+        
+        var options = {'title':'Myanmarese smuggled migrants/refugees by country, 2013',
+                       'width':700,
+                       'height':525};
+
+        // This is where we create our bar chart, and add the values 
+        // Needs a <div> as ingredient 
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        /* Command: Chart should execute itself, using the "data" that has been defined above 
+         * and the "options" object above. This contains the features of the bar chart.
+         */
+        
+        chart.draw(data, options);
+        
+        /* This is where the bar chart function ends. */
+        
+      }
+    </script>
+    
 	</head>
 
 	<body>
 		<h1>Burmese Refugees: Religious, Ethnic, Climate </h1>
 
+	 
 		<!--
 		We should have a mini introduction before talking about the different kinds of refugees.
 		-->
@@ -40,8 +74,21 @@
 			-->
 			<div class="Text">
 				Refugees from Burma come from various religious and ethnic backgrounds, and account for one of the largest refugee populations in the world. In 2016, a <a href="http://www.reuters.com/article/us-usa-myanmar-refugees-idUSKCN11Q2LK"> Reuters report </a> claimed that the number of Burmese refugees in the US is higher than the number of Syrian refugees in the country. Among them are Rohingya Muslims, Christian Chins and the Karen people, an ethnic minority in Burma who also tend to seek refuge in neighboring Thailand or Australia. Recently, Burma has also seen an increase in climate refugees who have been displaced following natural disasters.
+				</div>
 
 			</div>
+			
+			
+	 <div id="chart_div"></div>
+	 <div class="Outline">
+	 <div class="Captions">
+					This chart shows the thousands of Myanmarese smuggled refugees and migrants in different countries across southeast Asia in 2013
+					<br>
+					Source: Foreign Policy Magazine </br>
+				</div>
+			</div>
+	 
+	<p> </p>
 
 			<!--
 			Not sure if we should be using quotes in a sub-head, but let's try this
@@ -184,116 +231,7 @@
 			</div>
 		</div>
 
-		<script>
-			/* Burma's refugee crisis is ongoing which is why it's difficult to get a definite number of refugees or displaced population in the country. But in order for this webpage to be valid, we need to have at least an estimate of displaced people in Burma. So, we decided to put together all the data we have on all the different kinds of refugees to have some estimate on the number of people who are fleeing persecution in the country. */
-
-			var total_displaced_population_across_all_ethncities_in_Burma = 700000;
-
-			/* What makes the Rohingya population different from other refugee communities is how it's been termed a certain way by international media. It's important to have that definition in this description. */
-
-			var international_media_definition_of_Rohingyas = "most persecuted minority";
-
-			/* A lot of countries have only one kind of refugee communities. But Burma's case is different - it has many types of religious and ethnic communities fleeing persection. */
-
-			var More_than_one_type_refugee = true;
-
-			/* And therefore, it's important to classify the different refugee communities in Burma. There are religious, ethnic, as well as climate refugees.' */
-
-			var refg_types = ["Rohingya", "Chin Christians", "Karen", "Climate Refugees", "Buddhist Refugees"];
-
-			/* The biggest refugee population in Burma is the Rohingya population, so it's important to have enough information about them such as where they go, their population and what kinds of abuses they face. */
-
-			var Rohingya_characteristics = {
-				"religion" : "Muslim",
-				"region" : "Rakhine",
-				"population" : "One million",
-				"refugees_in_countries" : ["Bangladesh", "Malaysia", "Thailand", "Indonesia"],
-				"Rohingya_refugee_population_in_Bangladesh" : {
-					"refugee_concerns_in_Bangladesh" : "terrorism",
-					"refugee_numbers_est" : 500000,
-					"refugee_religion_majority" : "Muslim",
-					"abuse_type" : "rape"
-				},
-			};
-
-			/* Here I am going to classify the different links I've used to put together my webpage. There are four of them. */
-
-			var ListofSourcesForMyWebsite = [{
-
-				"NameOfThisSection" : "The world's 'most persecuted': The Rohingyas",
-
-				"TypeOfPublication" : "Research",
-
-				"LocationOfPublication" : "http://www.cfr.org/burmamyanmar/rohingya-migrant-crisis/p36651",
-
-				"DateUploaded" : "January 12 2017",
-
-			},
-
-			/* This is about the Karen population and will list the properties of the source of information about this population */
-
-			{
-
-				"NameOfThisSection" : "Karen: An ethnic minority in Burma",
-
-				"TypeOfPublication" : "Article",
-
-				"LocationOfPublication" : "https://www.theguardian.com/world/2016/apr/17/can-myanmars-lady-realise-countrys-dreams",
-
-				"DateUploaded" : "April 16 2016",
-
-			},
-
-			/* This is about the Chin refugees and will list the properties of the source of information about this population */
-
-			{
-
-				"NameOfThisSection" : "Plight of the Chin Christians fleeing Burma",
-
-				"TypeOfPublication" : "Article",
-
-				"LocationOfPublication" : "http://news.bbc.co.uk/2/hi/asia-pacific/8626008.stm",
-
-				"DateUploaded" : "April 19 2010",
-
-			},
-
-			/* This section is about the climate refugees and will list the properties of the source of information about this population */
-
-			{
-
-				"NameOfThisSection" : "Climate refugees of Burma",
-
-				"TypeOfPublication" : "Research",
-
-				"LocationOfPublication" : "https://static1.squarespace.com/static/506c8ea1e4b01d9450dd53f5/t/5845f2e2f7e0ab230f4631cb/1480979178783/2016126+Myanmar.pdf",
-
-				"DateUploaded" : "December 2010",
-
-			}];
-
-			/* Goal: Go through each item and print a message to the console everytime i want that was p */
-
-			for (var counter = 0; counter < ListofSourcesForMyWebsite.length; counter++) {
-
-				/* Check if the type of publication is "Article"
-				 * If it is, then print the object.
-				 * If not, print "not article"	 */
-
-				var currentSource = ListofSourcesForMyWebsite[counter];
-
-				if (currentSource.TypeOfPublication == "Article") {
-					console.log(currentSource);
-				} else {
-					console.log("not article");
-				}
-
-			}
-
-			console.log("This is the end of the loop!");
-
-
-		</script>
+		<script src="scripts.js" type="text/javascript"></script>
 	</body>
 </html>
 
