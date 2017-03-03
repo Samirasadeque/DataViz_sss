@@ -67,10 +67,23 @@
 
 			function CreateNewCharts2() {
 
-
-				var StackChartMynRefgUS = google.visualization.arrayToDataTable([['BlueBarChart2', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General', 'Western', 'Literature', {
+				var StackChart = google.visualization.arrayToDataTable(
+					
+					[['BlueBarChart2', 'All Other Refugees', 'Burmese Refugees', {
 					role : 'annotation'
-				}], ['2010', 10, 24, 20, 32, 18, 5, ''], ['2020', 16, 22, 23, 30, 16, 9, ''], ['2030', 28, 19, 29, 30, 12, 13, '']]);
+				}], ['2002', 26.7, 0.1, ''], ['2004', 51.8, 1.1, ''], ['2006', 39.5, 1.6, '']]);
+
+				var StackChartStyle_stacked = {
+					isStacked : true,
+					height : 300,
+					legend : {
+						position : 'top',
+						maxLines : 3
+					},
+					vAxis : {
+						minValue : 0
+					}
+				};
 
 				var StackChartStyle = {
 					width : 700,
@@ -84,13 +97,8 @@
 					},
 					isStacked : true,
 				};
-				
-				 var StackChartStyle_stacked = {
-          isStacked: true,
-          height: 300,
-          legend: {position: 'top', maxLines: 3},
-          vAxis: {minValue: 0}
-        };
+				var StackChartMynRefgUS = new google.visualization.BarChart(document.getElementById('BlueBarChart2'))
+				StackChartMynRefgUS.draw(StackChart, StackChartStyle);
 
 			}
 
@@ -122,13 +130,13 @@
 
 			<div class="row">
 
-				<div class="col-md-6">
+				<div class="col-md-4">
 
 					<div id="BlueBarChart1" class="chart_styles"></div>
 
 				</div>
 
-				<div class="col-md-6">
+				<div class="col-md-8">
 					<div id="BlueBarChart2" class="chart_styles"></div>
 
 				</div>
