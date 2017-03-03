@@ -18,7 +18,7 @@ img {
 	width: 700px;
 }
 
-#chart_div{
+.chart_styles{
 	width: 700px;
 	height: 525px;
 	background-color: #eeeeee;
