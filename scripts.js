@@ -1,5 +1,7 @@
 /**
+
  * @author Syeda Sadeque
+
  */
 
 /* Burma's refugee crisis is ongoing which is why it's difficult to get a definite number of refugees or displaced population in the country. But in order for this webpage to be valid, we need to have at least an estimate of displaced people in Burma. So, we decided to put together all the data we have on all the different kinds of refugees to have some estimate on the number of people who are fleeing persecution in the country. */
@@ -21,16 +23,27 @@ var refg_types = ["Rohingya", "Chin Christians", "Karen", "Climate Refugees", "B
 /* The biggest refugee population in Burma is the Rohingya population, so it's important to have enough information about them such as where they go, their population and what kinds of abuses they face. */
 
 var Rohingya_characteristics = {
+
 	"religion" : "Muslim",
+
 	"region" : "Rakhine",
+
 	"population" : "One million",
+
 	"refugees_in_countries" : ["Bangladesh", "Malaysia", "Thailand", "Indonesia"],
+
 	"Rohingya_refugee_population_in_Bangladesh" : {
+
 		"refugee_concerns_in_Bangladesh" : "terrorism",
+
 		"refugee_numbers_est" : 500000,
+
 		"refugee_religion_majority" : "Muslim",
+
 		"abuse_type" : "rape"
+
 	},
+
 };
 
 /* Here I am going to classify the different links I've used to put together my webpage. There are four of them. */
@@ -96,15 +109,21 @@ function checkTypeOfPublication(PublicationList) {
 	for (var counter = 0; counter < PublicationList.length; counter++) {
 
 		/* Check if the type of publication is "Article"
+
 		 * If it is, then print the object.
-		 * If not, print "not article"	 */
+
+		 * If not, print "not article"	*/
 
 		var currentSource = PublicationList[counter];
 
 		if (currentSource.TypeOfPublication == "Article") {
+
 			console.log(currentSource);
+
 		} else {
+
 			console.log("not article");
+
 		}
 
 	}
@@ -115,4 +134,4 @@ function checkTypeOfPublication(PublicationList) {
 
 /*	Explicitly call the function that checks type of publication */
 
-checkTypeOfPublication(ListofSourcesForMyWebsite); 
+checkTypeOfPublication(ListofSourcesForMyWebsite);
