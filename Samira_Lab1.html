@@ -46,7 +46,7 @@
 				// but I'm not sure. What do you think? I quite like it this way.
 
 				var ChartFeatures = {
-					'title' : 'Myanmarese smuggled migrants/refugees by country, 2013',
+					'title' : 'Smuggled Myanmarese migrants/refugees by country, 2013',
 					'width' : 700,
 					'height' : 525
 				};
@@ -67,25 +67,23 @@
 
 			function CreateNewCharts2() {
 
-				var StackChart = google.visualization.arrayToDataTable(
-					
-					[['BlueBarChart2', 'All Other Refugees', 'Burmese Refugees', {
-					role : 'annotation'
-				}], ['2002', 26.7, 0.1, ''], ['2004', 51.8, 1.1, ''], ['2006', 39.5, 1.6, '']]);
+				/* For the second chart, I want to use a stack chart. This graph depicts very well the number of Myanmarese refugees 
+				 * compared to refugees from other countries. This is useful because before the Syrian refugee crisis, this was the 
+				 * highest number of refugees being resettled in the US. */
 
-				var StackChartStyle_stacked = {
-					isStacked : true,
-					height : 300,
-					legend : {
-						position : 'top',
-						maxLines : 3
-					},
-					vAxis : {
-						minValue : 0
-					}
-				};
+				var StackChart = google.visualization.arrayToDataTable([['RedBlueStackChart', 'Other Refugees', 'Burmese Refugees', {
+					role : 'annotation'
+				}], ['2002', 26.7, 0.1, ''], ['2003', 28.1, 0.2, ''], ['2004', 51.8, 1.1, ''], ['2005', 52.3, 1.4, ''], ['2006', 39.5, 1.6, ''], ['2007', 34.3, 13.9, ''], ['2008', 42.0, 18.1, ''], ['2009', 56.4, 18.2, ''], ['2010', 39.4, 16.7, '']]);
+
+			/* For the isStacked value, I tried the 'percent' value, but that's only applicable when all the values add up to 100.
+			 * This would be misleading for this graph, so I stuck to the boolean value for this.
+			 * I wasn't sure about the height and width but it made sense to have it consistent with the other graph
+			* since they'll be next to each other. Also, the code did not have a title section - I almost missed that!
+			* Reminder to keep an eye out for things like that.
+			 */
 
 				var StackChartStyle = {
+					'title' : 'Myanmarese refugees in U.S. in relation to refugees from other countries (in Thousands)',
 					width : 700,
 					height : 525,
 					legend : {
@@ -95,10 +93,15 @@
 					bar : {
 						groupWidth : '100%'
 					},
-					isStacked : true,
+					isStacked : 'true',
 				};
-				var StackChartMynRefgUS = new google.visualization.BarChart(document.getElementById('BlueBarChart2'))
+				
+				/* Changed my ID to 'RedBlueStackChart' because that's less confusing against the other chart name which is called BlueChart1 */
+				
+				var StackChartMynRefgUS = new google.visualization.ColumnChart(document.getElementById('RedBlueStackChart'))
 				StackChartMynRefgUS.draw(StackChart, StackChartStyle);
+
+				/* This is where the bar chart ends. */
 
 			}
 
@@ -130,26 +133,36 @@
 
 			<div class="row">
 
-				<div class="col-md-4">
+				<div class="col-md-6">
 
 					<div id="BlueBarChart1" class="chart_styles"></div>
 
 				</div>
 
-				<div class="col-md-8">
-					<div id="BlueBarChart2" class="chart_styles"></div>
+				<!-- Wanted to change the number of rows because putting 6 rows for each chart would be too mainstream,
+				but it kinda backfired. Maybe it's best to alott 6-rows to each table.  Visually more appealing anyway. -->
 
+				<div class="col-md-6">
+					<div id="RedBlueStackChart" class="chart_styles"></div>
+					<div class="Captions">
+						This chart shows the number of Myanmarese refugees against all other refugees in the US between 2002 and 2010.
+						<br>
+						Data source: Migration Policy Institute </br>
+					</div>
 				</div>
 
-			</div>
+			<!-- This is an interesting challenge. Because I had a class "Outline" that put everything inside a column format,
+			having a chart next to the first one makes it difficult to put the caption.
+			So for the caption of the second chart, I had to remove the class "Outline".-->
 
 			<div class="Outline">
 				<div class="Captions">
 					This chart shows the thousands of Myanmarese smuggled refugees and migrants in different countries across southeast Asia in 2013
 					<br>
-					Data source: Foreign Policy Magazine </br>
+					Data source: Foreign Policy Institute </br>
 				</div>
 			</div>
+</div>
 
 			<p></p>
 
