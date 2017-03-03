@@ -14,12 +14,12 @@
 
       // Set a command "Load" that runs only when the Google Visualization API is loaded. This might be an issue when the page is loading
       // but we will take care of it when we face the issue. 
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(CreateBarChart);
 
       // "Load" command will create and populates the bar chart,
       // gives it proper measurement and features 
       // and adds the provided information in it.
-      function drawChart() {
+      function CreateBarChart() {
 
         // Create the data table. 
         // Our purpose is to make the visualization as easy on the viewer's eye as possible. 
