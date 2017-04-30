@@ -7,6 +7,7 @@
 	</head>
 	<body>
 		<h1></h1>
+		
 	</body>
 </html>
 
@@ -52,80 +53,137 @@
 		<meta property="article:modified_time" content="2017-04-21T21:00:48.000Z">
 
 		<!-- This is where I will add my code for the visualization.  -->
-		
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
-<script>
-		
-		google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawColColors);
 
-function drawColColors() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('Population', 'Refugee Population');
-      data.addColumn('number', 'Refugee Population');
-      data.addColumn('number', 'Repatriation Population');
+<!-- leaving this code for a bar chart as a comment here just in case 
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+						google.charts.load('current', {'packages':['bar']});
 
-      data.addRows([
-        [{v: [1979, 0, 0], f: '1979'}, 400000, 0],
-        [{v: [1980, 0, 0], f: '1980'}, 1428230, 0],
-        [{v: [1981, 0, 0], f: '1981'}, 2375330, 0],
-        [{v: [1982, 0, 0], f: '1982'}, 2877480, 0],
-        [{v: [1983, 0, 0], f: '1983'}, 2900000, 0],
-        [{v: [1984, 0, 0], f: '1984'}, 2500000, 0],
-        [{v: [1985, 0, 0], f: '1985'}, 2729910, 0],
-        [{v: [1986, 0, 0], f: '1986'}, 2878100, 0],
-        [{v: [1987, 0, 0], f: '1987'}, 3156000, 0],
-        [{v: [1988, 0, 0], f: '1988'}, 3254393, 0],
-        [{v: [1989, 0, 0], f: '1989'}, 3272290, 0],
-        [{v: [1990, 0, 0], f: '1990'}, 3253000, 19290],
-        [{v: [1991, 0, 0], f: '1991'}, 3098000, 175000],
-        [{v: [1992, 0, 0], f: '1992'}, 1627000, 1360000],
-        [{v: [1993, 0, 0], f: '1993'}, 1476876, 0],
-        [{v: [1994, 0, 0], f: '1994'}, 1053000, 102658],
-        [{v: [1995, 0, 0], f: '1995'}, 1200000, 153274],
-        [{v: [1996, 0, 0], f: '1996'}, 1200000, 140390],
-        [{v: [1997, 0, 0], f: '1997'}, 1200000, 84500]
-        [{v: [1998, 0, 0], f: '1998'}, 1200000, 93000],
-        [{v: [1999, 0, 0], f: '1999'}, 1200000, 91834],
-        [{v: [2000, 0, 0], f: '2000'}, 2000000, 76773],
-        [{v: [2001, 0, 0], f: '2001'}, 2197821, 8000],
-        [{v: [2002, 0, 0], f: '2002'}, 1226569, 1569248],
-        [{v: [2003, 0, 0], f: '2003'}, 1123647, 375526],
-        [{v: [2004, 0, 0], f: '2004'}, 1290408, 424477],
-        [{v: [2005, 0, 0], f: '2005'}, 1084208, 461118],
-        [{v: [2006, 0, 0], f: '2006'}, 1043984, 143019],
-        [{v: [2007, 0, 0], f: '2007'}, 2034416, 365663],
-        [{v: [2008, 0, 0], f: '2008'}, 1780150, 274200],
-        [{v: [2009, 0, 0], f: '2009'}, 1739935, 51290],
-        [{v: [2010, 0, 0], f: '2010'}, 1899842, 109383],
-        [{v: [2011, 0, 0], f: '2011'}, 1701945, 52096],
-        [{v: [2012, 0, 0], f: '2012'}, 1637740, 83423],
-        [{v: [2013, 0, 0], f: '2013'}, 1615876, 31224],
-        [{v: [2014, 0, 0], f: '2014'}, 1504912, 12991],
-        [{v: [2015, 0, 0], f: '2015'}, 1560592, 58211],
-      ]);
+			google.charts.setOnLoadCallback(ChartRefgRepatriation);
 
-      var options = {
-        title: 'refugee population v repatriation',
-        colors: ['#9575cd', '#33ac71'],
-        hAxis: {
-          title: 'Refugee Population',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [10000, 0],
-            max: [4000000, 0]
-          }
-        },
-        vAxis: {
-          title: 'Year'
-        }
-      };
+			/*When the code has been loaded,
+			* Execute the function below to draw the second column chart*/
 
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
-		
-		</script>
+			function ChartRefgRepatriation() {
+			/*Use the  Google library to create the visualization
+			*Make a data table with variable name which indicates the data for the number of resettlement of Vietnamese refugees
+			in host countries across the globe*/
+
+			var RefgPopnRepatr = new google.visualization.arrayToDataTable([
+			['Year', 'Total Refugees', 'Total Repatriated'],
+			          ['1979', 400000, 0],
+			          ['1980', 1428230, 0],
+			          ['1981', 2375330, 0],
+			          ['1982', 2877480, 0],
+			          ['1983', 2900000, 0],
+			          ['1984', 2500000, 0],
+			          ['1985', 2729910, 0],
+			          ['1986', 2878100, 0],
+			          ['1987', 3156000, 0],
+			          ['1988', 3254393, 0],
+			          ['1989', 3272290, 0],
+			          ['1990', 3253000, 19290],
+			          ['1991', 3098000, 175000],
+			['1992', 1627000, 1360000],
+			['1993', 1476876, 0],
+			['1994', 1053000, 102658],
+			['1995', 1200000, 153274],
+			['1996', 1200000, 140390],
+			 ['1997', 1200000, 84500],
+			['1998', 1200000, 93000],
+			['1999', 1200000, 91834],
+			['2000', 2000000, 76773],
+			['2001', 2197821, 8000],
+			['2002', 1226569, 1569248],
+			['2003', 1123647, 375526],
+			['2004', 1290408, 424477],
+			['2005', 1084208, 461118],
+			['2006', 1043984, 143019],
+			['2007', 2034416, 365663],
+			['2008', 1780150, 274200],
+			['2009', 1739935, 51290],
+			['2010', 1899842, 109383],
+			['2011', 1701945, 52096],
+			['2012', 1637740, 83423],
+			['2013', 1615876, 31224],
+			['2014', 1504912, 12991],
+			['2015', 1560592, 58211],
+			          ]);
+
+			/*Customize this column bar chart to add title, width and height*/
+
+			var RefgPopnRepatr_ChartStyle = {'title':'More than 10,000 refugees resttled in Buffalo since 2002',
+			'width':700,
+			'height':400
+			};
+			/* Create a variable that will call the data being fed in the columns and rows of the column chart */
+
+			var RefgPopnRepatr_ChartFinal = new google.charts.Bar(document.getElementById('RefgPopnRepatr_ChartID'));
+
+			/*Execute the column chart*/
+			RefgPopnRepatr_ChartFinal.draw(RefgPopnRepatr, google.charts.Bar.convertOptions(RefgPopnRepatr_ChartStyle));
+			/* End of drawChart function*/
+			}
+			    
+	</script> -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Refugee Population', 'Refugee Repatriation'],
+            ['1979', 400000, 0],
+			['1980', 1428230, 0],
+			['1981', 2375330, 0],
+			['1982', 2877480, 0],
+			['1983', 2900000, 0],
+			['1984', 2500000, 0],
+            ['1985', 2729910, 0],
+			['1986', 2878100, 0],
+			['1987', 3156000, 0],
+			['1988', 3254393, 0],
+			['1989', 3272290, 0],
+			['1990', 3253000, 19290],
+			['1991', 3098000, 175000],
+            ['1992', 1627000, 1360000],
+			['1993', 1476876, 0],
+			['1994', 1053000, 102658],
+			['1995', 1200000, 153274],
+			['1996', 1200000, 140390],
+			['1997', 1200000, 84500],
+            ['1998', 1200000, 93000],
+			['1999', 1200000, 91834],
+			['2000', 2000000, 76773],
+			['2001', 2197821, 8000],
+			['2002', 1226569, 1569248],
+			['2003', 1123647, 375526],
+            ['2004', 1290408, 424477],
+			['2005', 1084208, 461118],
+			['2006', 1043984, 143019],
+			['2007', 2034416, 365663],
+			['2008', 1780150, 274200],
+			['2009', 1739935, 51290],
+			['2010', 1899842, 109383],
+			['2011', 1701945, 52096],
+			['2012', 1637740, 83423],
+			['2013', 1615876, 31224],
+			['2014', 1504912, 12991],
+			['2015', 1560592, 58211],
+          ]);
+
+        var options = {
+          title: 'How the refugee population has been changing over the years in Pakistan',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
@@ -1072,7 +1130,7 @@ function drawColColors() {
 
 									<div class="col-md-6">
 
-										<div id="chart_div"></div>
+										<div id="DesignChart_TotalResettlement"></div>
 
 									</div>
 								</div>
@@ -1085,6 +1143,14 @@ function drawColColors() {
 
 									Gula was accused of having fake identity documents, although experts say that this is a mere reflection of the discrimination that many Afghan refugees in Pakistan.
 								</p>
+<!-- comment here:  -->
+
+							
+										
+										 <!-- commenting here: <div id="RefgPopnRepatr_ChartID" style="width: 700px; height: 400px;"></div> --> 
+										 
+									
+
 
 								<p>
 									The Afghan refugees have been in Pakistan since 1978, following a communist take-over of their country. Since then, thousands of Afghans have relocated to Pakistan, mostly along the stretch of the country’s western border. The peak of the Afghan refugee exodus was in 1980, with 80,000-90,000 refugees crossing the border every month. By 1989, according to UNHCR, the total number of Afghan refugees in Pakistan was more than 3% of the country’s total population -  3,270,000. According to a 2016 BBC report, nearly 1.4 million Afghan refugees are estimated to be in Pakistan, with a million more unregistered refugees.
@@ -1095,7 +1161,10 @@ function drawColColors() {
 
 								<div class="row">
 									<div class="col-md-6">
+										
+										<div id="curve_chart" style="width: 900px; height: 500px"></div>
 										<div id="RepatriationPieChart" style="width: 900px; height: 500px;"></div>
+										
 									</div>
 								</div>
 
@@ -1130,182 +1199,181 @@ function drawColColors() {
 								</div>
 
 								<!-- This is where I added my bottom buttons with "other stories" and links to similar stories. But when I insert it as a code, it messes up the layout of the page
-									so I'm going to post it here as a comment so that I don't lose the code:
+								so I'm going to post it here as a comment so that I don't lose the code:
 
-<div class="submeta">
-									<span class="submeta__label">Other regions</span>
-									<div class="submeta__section-labels"></div>
-									"" The "more on refugees" section was appearing with a break from the rest of the section here. I realized that's because the
-									it was under a separate <div> and <ul></ul> tag so I 'cut' it from there and clumped it under the same <ul></ul> tag that the rest of the
-									sections are: 
+								<div class="submeta">
+								<span class="submeta__label">Other regions</span>
+								<div class="submeta__section-labels"></div>
+								"" The "more on refugees" section was appearing with a break from the rest of the section here. I realized that's because the
+								it was under a separate <div> and <ul></ul> tag so I 'cut' it from there and clumped it under the same <ul></ul> tag that the rest of the
+								sections are:
 
-									<div class="submeta__keywords">
-										<ul class="submeta__links">
+								<div class="submeta__keywords">
+								<ul class="submeta__links">
 
-											<li class="submeta__link-item">
-												<a class="submeta__link" data-link-name="article section" href="http://www.columbia.edu/~ra2854/BuffaloFinalProject.html"> A success story in upstate New York </a>
-											</li>
+								<li class="submeta__link-item">
+								<a class="submeta__link" data-link-name="article section" href="http://www.columbia.edu/~ra2854/BuffaloFinalProject.html"> A success story in upstate New York </a>
+								</li>
 
-											<li class="submeta__link-item">
-												<a class="submeta__link" data-link-name="article section" href="http://www.columbia.edu/~ra2854/my_story.html"> Uganda's refugee policies tested under new influx </a>
-											</li>
-										</ul>
+								<li class="submeta__link-item">
+								<a class="submeta__link" data-link-name="article section" href="http://www.columbia.edu/~ra2854/my_story.html"> Uganda's refugee policies tested under new influx </a>
+								</li>
+								</ul>
 
-										<div class="submeta">
-											<span class="submeta__label">Topics</span>
-											<div class="submeta__section-labels"></div>
+								<div class="submeta">
+								<span class="submeta__label">Topics</span>
+								<div class="submeta__section-labels"></div>
 
-											<li class="submeta__link-item">
-												<a class="submeta__link" data-link-name="article section" href="https://www.theguardian.com/world/refugees"> More on refugees </a>
-											</li>
-											<li class="submeta__link-item">
-												<a class="submeta__link" href="https://www.theguardian.com/world/migration" data-link-name="keyword: world/migration"> More on migration </a>
-											</li>
-											<li class="submeta__link-item">
-												<a class="submeta__link" href="https://www.theguardian.com/world/europe-news" data-link-name="keyword: world/europe-news"> Europe </a>
-											</li>
-											<li class="submeta__link-item">
-												<a class="submeta__link" href="https://www.theguardian.com/world/libya" data-link-name="keyword: world/libya"> Libya </a>
-											</li>
-											<li class="submeta__link-item">
-												<a class="submeta__link" href="https://www.theguardian.com/world/italy" data-link-name="keyword: world/italy"> Italy </a>
-											</li>
+								<li class="submeta__link-item">
+								<a class="submeta__link" data-link-name="article section" href="https://www.theguardian.com/world/refugees"> More on refugees </a>
+								</li>
+								<li class="submeta__link-item">
+								<a class="submeta__link" href="https://www.theguardian.com/world/migration" data-link-name="keyword: world/migration"> More on migration </a>
+								</li>
+								<li class="submeta__link-item">
+								<a class="submeta__link" href="https://www.theguardian.com/world/europe-news" data-link-name="keyword: world/europe-news"> Europe </a>
+								</li>
+								<li class="submeta__link-item">
+								<a class="submeta__link" href="https://www.theguardian.com/world/libya" data-link-name="keyword: world/libya"> Libya </a>
+								</li>
+								<li class="submeta__link-item">
+								<a class="submeta__link" href="https://www.theguardian.com/world/italy" data-link-name="keyword: world/italy"> Italy </a>
+								</li>
 
-										</div>
-									
-									 -->
-									
-									
-										<div data-component="share" class="submeta__share">
-											<ul class="social social--bottom js-social--bottom u-unstyled u-cf" data-component="social">
-												<li class="social__item social__item--facebook " data-link-name="facebook">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://www.facebook.com/dialog/share?app_id=180444840287&amp;href=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_fb" target="_blank" title="Facebook"> <span class="inline-icon__fallback button share-modal__item share-modal__item--facebook">Share on Facebook</span> <span class="inline-share-facebook inline-icon rounded-icon centered-icon social-icon social-icon--facebook">
-														<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--facebook__svg inline-share-facebook__svg inline-icon__svg">
-															<path d="M17.9 14h-3v8H12v-8h-2v-2.9h2V8.7C12 6.8 13.1 5 16 5c1.2 0 2 .1 2 .1v3h-1.8c-1 0-1.2.5-1.2 1.3v1.8h3l-.1 2.8z"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--twitter " data-link-name="twitter">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://twitter.com/intent/tweet?text=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_tw" target="_blank" title="Twitter"> <span class="inline-icon__fallback button share-modal__item share-modal__item--twitter">Share on Twitter</span> <span class="inline-share-twitter inline-icon rounded-icon centered-icon social-icon social-icon--twitter">
-														<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--twitter__svg inline-share-twitter__svg inline-icon__svg">
-															<path d="M21.3 10.5v.5c0 4.7-3.5 10.1-9.9 10.1-2 0-3.8-.6-5.3-1.6.3 0 .6.1.8.1 1.6 0 3.1-.6 4.3-1.5-1.5 0-2.8-1-3.3-2.4.2 0 .4.1.7.1l.9-.1c-1.6-.3-2.8-1.8-2.8-3.5.5.3 1 .4 1.6.4-.9-.6-1.6-1.7-1.6-2.9 0-.6.2-1.3.5-1.8 1.7 2.1 4.3 3.6 7.2 3.7-.1-.3-.1-.5-.1-.8 0-2 1.6-3.5 3.5-3.5 1 0 1.9.4 2.5 1.1.8-.1 1.5-.4 2.2-.8-.3.8-.8 1.5-1.5 1.9.7-.1 1.4-.3 2-.5-.4.4-1 1-1.7 1.5z"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--email " data-link-name="email">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="mailto:?subject=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;body=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_link" target="_blank" title="Email"> <span class="inline-icon__fallback button share-modal__item share-modal__item--email">Share via Email</span> <span class="inline-share-email inline-icon rounded-icon centered-icon social-icon social-icon--email">
-														<svg width="32" height="32" viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--email__svg inline-share-email__svg inline-icon__svg">
-															<path d="M23.363 20.875H8.637v-8.938l6.545 5.687h1.637l6.544-5.687v8.938zm-1.635-9.75L16 16l-5.728-4.875h11.456zM23.363 9.5H8.637L7 11.125v9.75L8.637 22.5h14.727L25 20.875v-9.75L23.363 9.5z"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--linkedin " data-link-name="linkedin">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="LinkedIn"> <span class=" u-h ">Share on LinkedIn</span> <span class="inline-share-linkedin inline-icon rounded-icon centered-icon social-icon social-icon--linkedin">
-														<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--linkedin__svg inline-share-linkedin__svg inline-icon__svg">
-															<path d="M10.576 7.985a1.57 1.57 0 0 1 0 3.137 1.568 1.568 0 0 1 0-3.137zm-1.353 4.327h2.706v8.704H9.223v-8.704zm4.403 0h2.595v1.19h.037c.361-.685 1.244-1.407 2.56-1.407 2.737 0 3.243 1.803 3.243 4.147v4.774h-2.702v-4.232c0-1.01-.02-2.308-1.406-2.308-1.408 0-1.623 1.1-1.623 2.235v4.305h-2.704v-8.704"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--pinterest " data-link-name="pinterest">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.pinterest.com/pin/find/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="Pinterest"> <span class=" u-h ">Share on Pinterest</span> <span class="inline-share-pinterest inline-icon rounded-icon centered-icon social-icon social-icon--pinterest">
-														<svg viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--pinterest__svg inline-share-pinterest__svg inline-icon__svg">
-															<path d="M16.363 8C12.133 8 10 11.13 10 13.74c0 1.582.58 2.988 1.823 3.512.204.086.387.003.446-.23.04-.16.137-.568.18-.737.06-.23.037-.312-.127-.513-.36-.436-.588-1-.588-1.802 0-2.322 1.684-4.402 4.384-4.402 2.39 0 3.703 1.508 3.703 3.522 0 2.65-1.136 4.887-2.822 4.887-.93 0-1.628-.795-1.405-1.77.268-1.165.786-2.42.786-3.262 0-.752-.39-1.38-1.2-1.38-.952 0-1.716 1.017-1.716 2.38 0 .867.284 1.454.284 1.454l-1.146 5.006c-.34 1.487-.05 3.31-.026 3.493.014.108.15.134.21.05.09-.117 1.223-1.562 1.61-3.006.108-.41.625-2.526.625-2.526.31.61 1.215 1.145 2.176 1.145 2.862 0 4.804-2.693 4.804-6.298C22 10.54 19.763 8 16.363 8"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--gplus " data-link-name="gplus">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_gp&amp;amp;hl=en-GB&amp;amp;wwc=1" target="_blank" title="Google plus"> <span class=" u-h ">Share on Google+</span> <span class="inline-share-gplus inline-icon rounded-icon centered-icon social-icon social-icon--gplus">
-														<svg width="32" height="32" viewBox="4 -4 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--gplus__svg inline-share-gplus__svg inline-icon__svg">
-															<path d="M8.8 12c-.1 2.9 2 5.7 4.7 6.6 2.6.9 5.8.2 7.5-2 1.3-1.6 1.6-3.6 1.4-5.6h-6.7v2.4h4c-.3 1.2-1.1 2.2-2.3 2.7-2.3 1-5.1-.3-5.8-2.7-.9-2.3.5-5 2.9-5.7 1.4-.5 2.9.1 4.1.8l1.8-1.8c-1.4-1.2-3.2-1.9-5-1.7-3.6.1-6.8 3.4-6.6 7zm18-3v2h-2v2h2v2h2v-2h2v-2h-2V9h-2z"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--whatsapp " data-link-name="whatsapp">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="whatsapp://send?text=%22Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean%22%20https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_wa" target="_blank" title="WhatsApp"> <span class=" u-h ">Share on WhatsApp</span> <span class="inline-share-whatsapp inline-icon rounded-icon centered-icon social-icon social-icon--whatsapp">
-														<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--whatsapp__svg inline-share-whatsapp__svg inline-icon__svg">
-															<path d="M22.09 7.87a9.9 9.9 0 0 0-7.05-2.92c-5.49 0-9.96 4.47-9.96 9.96 0 1.75.46 3.47 1.33 4.98L5 25.04l5.28-1.38c1.45.79 3.09 1.21 4.76 1.21 5.49 0 9.96-4.47 9.96-9.96a9.92 9.92 0 0 0-2.91-7.04m-7.05 15.32c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.19 8.19 0 0 1-1.26-4.41c0-4.56 3.71-8.27 8.28-8.27 2.21 0 4.29.86 5.85 2.43a8.222 8.222 0 0 1 2.42 5.85c0 4.56-3.72 8.27-8.28 8.27m4.54-6.2c-.25-.12-1.47-.73-1.7-.81s-.39-.12-.56.12c-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23a7.283 7.283 0 0 1-1.38-1.72c-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.66.31-.22.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.57.12.17 1.75 2.68 4.25 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18s.21-1.08.14-1.18c-.06-.08-.23-.14-.48-.27"></path>
-														</svg> </span> </a>
-												</li>
-												<li class="social__item social__item--messenger " data-link-name="messenger">
-													<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="fb-messenger://share?link=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_me&amp;app_id=180444840287" target="_blank" title="Messenger"> <span class=" u-h ">Share on Messenger</span> <span class="inline-share-messenger inline-icon rounded-icon centered-icon social-icon social-icon--messenger">
-														<svg width="66" height="66" viewBox="-12 -12 90 90" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--messenger__svg inline-share-messenger__svg inline-icon__svg">
-															<path fill-rule="evenodd" clip-rule="evenodd" d="M33 61.1c-3.6 0-7.1-.5-10.4-1.5L10.1 66V52.5C3.9 47 0 39.2 0 30.6 0 13.7 14.8 0 33 0s33 13.7 33 30.6c0 16.8-14.8 30.5-33 30.5zM36.5 41L28 32.2l-16.4 9 18-18.9 8.5 8.8 16.4-9-18 18.9z"></path>
-														</svg> </span> </a>
-												</li>
-											</ul>
-										</div>
-										<div class="submeta__syndication">
-											<ul class="syndication--bottom u-unstyled">
-												<li class="syndication__item">
-													<a class="syndication__action" data-link-name="meta-syndication-article" href="https://syndication.theguardian.com/automation/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy&amp;type=article&amp;internalpagecode=3404727" target="_blank" title="Reuse this content"> <span class="syndication__link button button--syndication-reprint button--small">Reuse this content</span> </a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="after-article js-after-article"></div>
 								</div>
-								<div class="content__secondary-column js-secondary-column" aria-hidden="true">
-									<div class="ad-slot-container"></div>
-									<div class="js-components-container">
-										<div class="js-right-most-popular right-most-popular right-most-popular--image component--rhc hide-on-childrens-books-site" data-component="geo-most-popular" data-importance="-1" data-test-id="right-most-popular">
-											<h3 class="content__meta-heading">Most popular in US</h3>
-											<ul class="right-most-popular__items u-unstyled" data-link-name="Right hand most popular geo US">
-												<li class="right-most-popular-item" data-link-name="trail | 1">
-													<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/culture/2017/apr/21/rashida-jones-pornography-netflix-hot-girls-wanted">
-													<div class="right-most-popular-item__img media__img">
-														<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/983fef27fd1cc071b8eb1a8bf81cfeea4666083b/0_235_2558_1534/master/2558.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=1afa788fed19356f3cbe690fcca51b75" alt=""> -->
-														<img src="https://i.guim.co.uk/img/media/983fef27fd1cc071b8eb1a8bf81cfeea4666083b/0_235_2558_1534/master/2558.jpg" alt="">
 
-													</div>
-													<div class="media__body">
-														<h4 class="right-most-popular-item__headline">Rashida Jones on pornography: 'It's not this dark, taboo thing any more'</h4>
-													</div> </a>
-												</li>
-												<li class="right-most-popular-item" data-link-name="trail | 2">
-													<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/environment/2017/apr/21/britain-set-for-first-coal-free-day-since-the-industrial-revolution">
-													<div class="right-most-popular-item__img media__img">
-														<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/eb66faea5f2573143c25b03ad0e571499f267334/0_267_4000_2400/master/4000.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=a7f0ed09968af9212b47ccc1756b2ca8" alt=""> -->
-														<img src="https://i.guim.co.uk/img/media/eb66faea5f2573143c25b03ad0e571499f267334/0_267_4000_2400/master/4000.jpg" alt="">
+								-->
 
-													</div>
-													<div class="media__body">
-														<h4 class="right-most-popular-item__headline">Britain set for first coal-free day since Industrial Revolution</h4>
-													</div> </a>
-												</li>
-												<li class="right-most-popular-item" data-link-name="trail | 3">
-													<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/us-news/2017/apr/21/donald-trump-marine-le-pen-french-presidential-election">
-													<div class="right-most-popular-item__img media__img">
-														<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/8dfb2d1aede30fb85f577f0a37aabbe37f7d67dd/0_149_4457_2674/master/4457.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=d4fb569cd332498881d995a8168f74b3" alt=""> -->
-														<img src="https://i.guim.co.uk/img/media/8dfb2d1aede30fb85f577f0a37aabbe37f7d67dd/0_149_4457_2674/master/4457.jpg" alt="">
+								<div data-component="share" class="submeta__share">
+									<ul class="social social--bottom js-social--bottom u-unstyled u-cf" data-component="social">
+										<li class="social__item social__item--facebook " data-link-name="facebook">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://www.facebook.com/dialog/share?app_id=180444840287&amp;href=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_fb" target="_blank" title="Facebook"> <span class="inline-icon__fallback button share-modal__item share-modal__item--facebook">Share on Facebook</span> <span class="inline-share-facebook inline-icon rounded-icon centered-icon social-icon social-icon--facebook">
+												<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--facebook__svg inline-share-facebook__svg inline-icon__svg">
+													<path d="M17.9 14h-3v8H12v-8h-2v-2.9h2V8.7C12 6.8 13.1 5 16 5c1.2 0 2 .1 2 .1v3h-1.8c-1 0-1.2.5-1.2 1.3v1.8h3l-.1 2.8z"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--twitter " data-link-name="twitter">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://twitter.com/intent/tweet?text=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_tw" target="_blank" title="Twitter"> <span class="inline-icon__fallback button share-modal__item share-modal__item--twitter">Share on Twitter</span> <span class="inline-share-twitter inline-icon rounded-icon centered-icon social-icon social-icon--twitter">
+												<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--twitter__svg inline-share-twitter__svg inline-icon__svg">
+													<path d="M21.3 10.5v.5c0 4.7-3.5 10.1-9.9 10.1-2 0-3.8-.6-5.3-1.6.3 0 .6.1.8.1 1.6 0 3.1-.6 4.3-1.5-1.5 0-2.8-1-3.3-2.4.2 0 .4.1.7.1l.9-.1c-1.6-.3-2.8-1.8-2.8-3.5.5.3 1 .4 1.6.4-.9-.6-1.6-1.7-1.6-2.9 0-.6.2-1.3.5-1.8 1.7 2.1 4.3 3.6 7.2 3.7-.1-.3-.1-.5-.1-.8 0-2 1.6-3.5 3.5-3.5 1 0 1.9.4 2.5 1.1.8-.1 1.5-.4 2.2-.8-.3.8-.8 1.5-1.5 1.9.7-.1 1.4-.3 2-.5-.4.4-1 1-1.7 1.5z"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--email " data-link-name="email">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="mailto:?subject=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;body=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_link" target="_blank" title="Email"> <span class="inline-icon__fallback button share-modal__item share-modal__item--email">Share via Email</span> <span class="inline-share-email inline-icon rounded-icon centered-icon social-icon social-icon--email">
+												<svg width="32" height="32" viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--email__svg inline-share-email__svg inline-icon__svg">
+													<path d="M23.363 20.875H8.637v-8.938l6.545 5.687h1.637l6.544-5.687v8.938zm-1.635-9.75L16 16l-5.728-4.875h11.456zM23.363 9.5H8.637L7 11.125v9.75L8.637 22.5h14.727L25 20.875v-9.75L23.363 9.5z"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--linkedin " data-link-name="linkedin">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="LinkedIn"> <span class=" u-h ">Share on LinkedIn</span> <span class="inline-share-linkedin inline-icon rounded-icon centered-icon social-icon social-icon--linkedin">
+												<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--linkedin__svg inline-share-linkedin__svg inline-icon__svg">
+													<path d="M10.576 7.985a1.57 1.57 0 0 1 0 3.137 1.568 1.568 0 0 1 0-3.137zm-1.353 4.327h2.706v8.704H9.223v-8.704zm4.403 0h2.595v1.19h.037c.361-.685 1.244-1.407 2.56-1.407 2.737 0 3.243 1.803 3.243 4.147v4.774h-2.702v-4.232c0-1.01-.02-2.308-1.406-2.308-1.408 0-1.623 1.1-1.623 2.235v4.305h-2.704v-8.704"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--pinterest " data-link-name="pinterest">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.pinterest.com/pin/find/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="Pinterest"> <span class=" u-h ">Share on Pinterest</span> <span class="inline-share-pinterest inline-icon rounded-icon centered-icon social-icon social-icon--pinterest">
+												<svg viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--pinterest__svg inline-share-pinterest__svg inline-icon__svg">
+													<path d="M16.363 8C12.133 8 10 11.13 10 13.74c0 1.582.58 2.988 1.823 3.512.204.086.387.003.446-.23.04-.16.137-.568.18-.737.06-.23.037-.312-.127-.513-.36-.436-.588-1-.588-1.802 0-2.322 1.684-4.402 4.384-4.402 2.39 0 3.703 1.508 3.703 3.522 0 2.65-1.136 4.887-2.822 4.887-.93 0-1.628-.795-1.405-1.77.268-1.165.786-2.42.786-3.262 0-.752-.39-1.38-1.2-1.38-.952 0-1.716 1.017-1.716 2.38 0 .867.284 1.454.284 1.454l-1.146 5.006c-.34 1.487-.05 3.31-.026 3.493.014.108.15.134.21.05.09-.117 1.223-1.562 1.61-3.006.108-.41.625-2.526.625-2.526.31.61 1.215 1.145 2.176 1.145 2.862 0 4.804-2.693 4.804-6.298C22 10.54 19.763 8 16.363 8"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--gplus " data-link-name="gplus">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_gp&amp;amp;hl=en-GB&amp;amp;wwc=1" target="_blank" title="Google plus"> <span class=" u-h ">Share on Google+</span> <span class="inline-share-gplus inline-icon rounded-icon centered-icon social-icon social-icon--gplus">
+												<svg width="32" height="32" viewBox="4 -4 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--gplus__svg inline-share-gplus__svg inline-icon__svg">
+													<path d="M8.8 12c-.1 2.9 2 5.7 4.7 6.6 2.6.9 5.8.2 7.5-2 1.3-1.6 1.6-3.6 1.4-5.6h-6.7v2.4h4c-.3 1.2-1.1 2.2-2.3 2.7-2.3 1-5.1-.3-5.8-2.7-.9-2.3.5-5 2.9-5.7 1.4-.5 2.9.1 4.1.8l1.8-1.8c-1.4-1.2-3.2-1.9-5-1.7-3.6.1-6.8 3.4-6.6 7zm18-3v2h-2v2h2v2h2v-2h2v-2h-2V9h-2z"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--whatsapp " data-link-name="whatsapp">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="whatsapp://send?text=%22Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean%22%20https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_wa" target="_blank" title="WhatsApp"> <span class=" u-h ">Share on WhatsApp</span> <span class="inline-share-whatsapp inline-icon rounded-icon centered-icon social-icon social-icon--whatsapp">
+												<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--whatsapp__svg inline-share-whatsapp__svg inline-icon__svg">
+													<path d="M22.09 7.87a9.9 9.9 0 0 0-7.05-2.92c-5.49 0-9.96 4.47-9.96 9.96 0 1.75.46 3.47 1.33 4.98L5 25.04l5.28-1.38c1.45.79 3.09 1.21 4.76 1.21 5.49 0 9.96-4.47 9.96-9.96a9.92 9.92 0 0 0-2.91-7.04m-7.05 15.32c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.19 8.19 0 0 1-1.26-4.41c0-4.56 3.71-8.27 8.28-8.27 2.21 0 4.29.86 5.85 2.43a8.222 8.222 0 0 1 2.42 5.85c0 4.56-3.72 8.27-8.28 8.27m4.54-6.2c-.25-.12-1.47-.73-1.7-.81s-.39-.12-.56.12c-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23a7.283 7.283 0 0 1-1.38-1.72c-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.66.31-.22.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.57.12.17 1.75 2.68 4.25 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18s.21-1.08.14-1.18c-.06-.08-.23-.14-.48-.27"></path>
+												</svg> </span> </a>
+										</li>
+										<li class="social__item social__item--messenger " data-link-name="messenger">
+											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="fb-messenger://share?link=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_me&amp;app_id=180444840287" target="_blank" title="Messenger"> <span class=" u-h ">Share on Messenger</span> <span class="inline-share-messenger inline-icon rounded-icon centered-icon social-icon social-icon--messenger">
+												<svg width="66" height="66" viewBox="-12 -12 90 90" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--messenger__svg inline-share-messenger__svg inline-icon__svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M33 61.1c-3.6 0-7.1-.5-10.4-1.5L10.1 66V52.5C3.9 47 0 39.2 0 30.6 0 13.7 14.8 0 33 0s33 13.7 33 30.6c0 16.8-14.8 30.5-33 30.5zM36.5 41L28 32.2l-16.4 9 18-18.9 8.5 8.8 16.4-9-18 18.9z"></path>
+												</svg> </span> </a>
+										</li>
+									</ul>
+								</div>
+								<div class="submeta__syndication">
+									<ul class="syndication--bottom u-unstyled">
+										<li class="syndication__item">
+											<a class="syndication__action" data-link-name="meta-syndication-article" href="https://syndication.theguardian.com/automation/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy&amp;type=article&amp;internalpagecode=3404727" target="_blank" title="Reuse this content"> <span class="syndication__link button button--syndication-reprint button--small">Reuse this content</span> </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="after-article js-after-article"></div>
+						</div>
+						<div class="content__secondary-column js-secondary-column" aria-hidden="true">
+							<div class="ad-slot-container"></div>
+							<div class="js-components-container">
+								<div class="js-right-most-popular right-most-popular right-most-popular--image component--rhc hide-on-childrens-books-site" data-component="geo-most-popular" data-importance="-1" data-test-id="right-most-popular">
+									<h3 class="content__meta-heading">Most popular in US</h3>
+									<ul class="right-most-popular__items u-unstyled" data-link-name="Right hand most popular geo US">
+										<li class="right-most-popular-item" data-link-name="trail | 1">
+											<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/culture/2017/apr/21/rashida-jones-pornography-netflix-hot-girls-wanted">
+											<div class="right-most-popular-item__img media__img">
+												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/983fef27fd1cc071b8eb1a8bf81cfeea4666083b/0_235_2558_1534/master/2558.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=1afa788fed19356f3cbe690fcca51b75" alt=""> -->
+												<img src="https://i.guim.co.uk/img/media/983fef27fd1cc071b8eb1a8bf81cfeea4666083b/0_235_2558_1534/master/2558.jpg" alt="">
 
-													</div>
-													<div class="media__body">
-														<h4 class="right-most-popular-item__headline">Donald Trump: Marine Le Pen is 'strongest candidate' in French election</h4>
-													</div> </a>
-												</li>
+											</div>
+											<div class="media__body">
+												<h4 class="right-most-popular-item__headline">Rashida Jones on pornography: 'It's not this dark, taboo thing any more'</h4>
+											</div> </a>
+										</li>
+										<li class="right-most-popular-item" data-link-name="trail | 2">
+											<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/environment/2017/apr/21/britain-set-for-first-coal-free-day-since-the-industrial-revolution">
+											<div class="right-most-popular-item__img media__img">
+												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/eb66faea5f2573143c25b03ad0e571499f267334/0_267_4000_2400/master/4000.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=a7f0ed09968af9212b47ccc1756b2ca8" alt=""> -->
+												<img src="https://i.guim.co.uk/img/media/eb66faea5f2573143c25b03ad0e571499f267334/0_267_4000_2400/master/4000.jpg" alt="">
 
-												<li class="right-most-popular-item" data-link-name="trail | 4">
-													<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/us-news/live/2017/apr/21/trump-marine-le-pen-france">
-													<div class="right-most-popular-item__img media__img">
-														<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/5ecfcfcd4d9fe9abfca4c0ab2c9c5644d3545046/0_355_5324_3194/master/5324.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=91f704d7fa7f867102213564127b7d0c" alt=""> -->
-														<img src="https://i.guim.co.uk/img/media/5ecfcfcd4d9fe9abfca4c0ab2c9c5644d3545046/0_355_5324_3194/master/5324.jpg" alt="">
+											</div>
+											<div class="media__body">
+												<h4 class="right-most-popular-item__headline">Britain set for first coal-free day since Industrial Revolution</h4>
+											</div> </a>
+										</li>
+										<li class="right-most-popular-item" data-link-name="trail | 3">
+											<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/us-news/2017/apr/21/donald-trump-marine-le-pen-french-presidential-election">
+											<div class="right-most-popular-item__img media__img">
+												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/8dfb2d1aede30fb85f577f0a37aabbe37f7d67dd/0_149_4457_2674/master/4457.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=d4fb569cd332498881d995a8168f74b3" alt=""> -->
+												<img src="https://i.guim.co.uk/img/media/8dfb2d1aede30fb85f577f0a37aabbe37f7d67dd/0_149_4457_2674/master/4457.jpg" alt="">
 
-													</div>
-													<div class="media__body">
-														<h4 class="right-most-popular-item__headline">Trump applauds Le Pen's strength | The minute</h4>
-													</div> </a>
-												</li>
-												<li class="right-most-popular-item" data-link-name="trail | 5">
-													<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/lifeandstyle/2017/apr/20/stroke-and-dementia-risk-linked-to-low-sugar-drinks-study-finds">
-													<div class="right-most-popular-item__img media__img">
-														<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/5f6d20f07104875d85c9ce13d7d9b48d53259b77/533_369_3211_1928/master/3211.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=346841886ef3ca271c199cdb7ab13c49" alt=""> -->
-														<img src="https://i.guim.co.uk/img/media/5f6d20f07104875d85c9ce13d7d9b48d53259b77/533_369_3211_1928/master/3211.jpg" alt="">
+											</div>
+											<div class="media__body">
+												<h4 class="right-most-popular-item__headline">Donald Trump: Marine Le Pen is 'strongest candidate' in French election</h4>
+											</div> </a>
+										</li>
 
-													</div>
-													<div class="media__body">
-														<h4 class="right-most-popular-item__headline">Stroke and dementia risk linked to artificial sweeteners, study suggests</h4>
-													</div> </a>
-												</li>
-											</ul>
-										</div>
-									</div>
+										<li class="right-most-popular-item" data-link-name="trail | 4">
+											<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/us-news/live/2017/apr/21/trump-marine-le-pen-france">
+											<div class="right-most-popular-item__img media__img">
+												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/5ecfcfcd4d9fe9abfca4c0ab2c9c5644d3545046/0_355_5324_3194/master/5324.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=91f704d7fa7f867102213564127b7d0c" alt=""> -->
+												<img src="https://i.guim.co.uk/img/media/5ecfcfcd4d9fe9abfca4c0ab2c9c5644d3545046/0_355_5324_3194/master/5324.jpg" alt="">
+
+											</div>
+											<div class="media__body">
+												<h4 class="right-most-popular-item__headline">Trump applauds Le Pen's strength | The minute</h4>
+											</div> </a>
+										</li>
+										<li class="right-most-popular-item" data-link-name="trail | 5">
+											<a class="right-most-popular-item__url media u-cf" href="https://www.theguardian.com/lifeandstyle/2017/apr/20/stroke-and-dementia-risk-linked-to-low-sugar-drinks-study-finds">
+											<div class="right-most-popular-item__img media__img">
+												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/5f6d20f07104875d85c9ce13d7d9b48d53259b77/533_369_3211_1928/master/3211.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=346841886ef3ca271c199cdb7ab13c49" alt=""> -->
+												<img src="https://i.guim.co.uk/img/media/5f6d20f07104875d85c9ce13d7d9b48d53259b77/533_369_3211_1928/master/3211.jpg" alt="">
+
+											</div>
+											<div class="media__body">
+												<h4 class="right-most-popular-item__headline">Stroke and dementia risk linked to artificial sweeteners, study suggests</h4>
+											</div> </a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
 			</article>
 			<div class="ad_unit" style="position: absolute; left: 0px; top: 0px; height: 10px; z-index: -1;">
 				&nbsp;
