@@ -129,10 +129,10 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawLineChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
+      function drawLineChart() {
+        var RefgInfo = google.visualization.arrayToDataTable([
           ['Year', 'Refugee Population', 'Refugee Repatriation'],
             ['1979', 400000, 0],
 			['1980', 1428230, 0],
@@ -173,16 +173,16 @@
 			['2015', 1560592, 58211],
           ]);
 
-        var options = {
+        var LineChartFeatures = {
           title: 'How the refugee population has been changing over the years in Pakistan',
           curveType: 'function',
           colors : ['#e6550d', '#2b8cbe'],
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('RefgLineChart'));
 
-        chart.draw(data, options);
+        chart.draw(RefgInfo, LineChartFeatures);
       }
     </script>
 
@@ -1156,7 +1156,7 @@ According to a February 2017 report, due to “a toxic combination of deportatio
 										<div class="row">
 									<div class="col-md-6">
 										
-										<div id="curve_chart" style="width: 750px; height: 500px"></div>
+										<div id="RefgLineChart" style="width: 750px; height: 500px"></div>
 									
 										
 									</div>
