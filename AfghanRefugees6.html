@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1></h1>
-		
+
 	</body>
 </html>
 
@@ -54,140 +54,140 @@
 
 		<!-- This is where I will add my code for the visualization.  -->
 
-<!-- leaving this code for a bar chart as a comment here just in case I need to use it:
+		<!-- leaving this code for a bar chart as a comment here just in case I need to use it:
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
-						google.charts.load('current', {'packages':['bar']});
+		google.charts.load('current', {'packages':['bar']});
 
-			google.charts.setOnLoadCallback(ChartRefgRepatriation);
+		google.charts.setOnLoadCallback(ChartRefgRepatriation);
 
-			/*When the code has been loaded,
-			* Execute the function below to draw the second column chart*/
+		/*When the code has been loaded,
+		* Execute the function below to draw the second column chart*/
 
-			function ChartRefgRepatriation() {
-			/*Use the  Google library to create the visualization
-			*Make a data table with variable name which indicates the data for the number of resettlement of Vietnamese refugees
-			in host countries across the globe*/
+		function ChartRefgRepatriation() {
+		/*Use the  Google library to create the visualization
+		*Make a data table with variable name which indicates the data for the number of resettlement of Vietnamese refugees
+		in host countries across the globe*/
 
-			var RefgPopnRepatr = new google.visualization.arrayToDataTable([
-			['Year', 'Total Refugees', 'Total Repatriated'],
-			          ['1979', 400000, 0],
-			          ['1980', 1428230, 0],
-			          ['1981', 2375330, 0],
-			          ['1982', 2877480, 0],
-			          ['1983', 2900000, 0],
-			          ['1984', 2500000, 0],
-			          ['1985', 2729910, 0],
-			          ['1986', 2878100, 0],
-			          ['1987', 3156000, 0],
-			          ['1988', 3254393, 0],
-			          ['1989', 3272290, 0],
-			          ['1990', 3253000, 19290],
-			          ['1991', 3098000, 175000],
-			['1992', 1627000, 1360000],
-			['1993', 1476876, 0],
-			['1994', 1053000, 102658],
-			['1995', 1200000, 153274],
-			['1996', 1200000, 140390],
-			 ['1997', 1200000, 84500],
-			['1998', 1200000, 93000],
-			['1999', 1200000, 91834],
-			['2000', 2000000, 76773],
-			['2001', 2197821, 8000],
-			['2002', 1226569, 1569248],
-			['2003', 1123647, 375526],
-			['2004', 1290408, 424477],
-			['2005', 1084208, 461118],
-			['2006', 1043984, 143019],
-			['2007', 2034416, 365663],
-			['2008', 1780150, 274200],
-			['2009', 1739935, 51290],
-			['2010', 1899842, 109383],
-			['2011', 1701945, 52096],
-			['2012', 1637740, 83423],
-			['2013', 1615876, 31224],
-			['2014', 1504912, 12991],
-			['2015', 1560592, 58211],
-			          ]);
+		var RefgPopnRepatr = new google.visualization.arrayToDataTable([
+		['Year', 'Total Refugees', 'Total Repatriated'],
+		          ['1979', 400000, 0],
+		          ['1980', 1428230, 0],
+		          ['1981', 2375330, 0],
+		          ['1982', 2877480, 0],
+		          ['1983', 2900000, 0],
+		          ['1984', 2500000, 0],
+		          ['1985', 2729910, 0],
+		          ['1986', 2878100, 0],
+		          ['1987', 3156000, 0],
+		          ['1988', 3254393, 0],
+		          ['1989', 3272290, 0],
+		          ['1990', 3253000, 19290],
+		          ['1991', 3098000, 175000],
+		['1992', 1627000, 1360000],
+		['1993', 1476876, 0],
+		['1994', 1053000, 102658],
+		['1995', 1200000, 153274],
+		['1996', 1200000, 140390],
+		 ['1997', 1200000, 84500],
+		['1998', 1200000, 93000],
+		['1999', 1200000, 91834],
+		['2000', 2000000, 76773],
+		['2001', 2197821, 8000],
+		['2002', 1226569, 1569248],
+		['2003', 1123647, 375526],
+		['2004', 1290408, 424477],
+		['2005', 1084208, 461118],
+		['2006', 1043984, 143019],
+		['2007', 2034416, 365663],
+		['2008', 1780150, 274200],
+		['2009', 1739935, 51290],
+		['2010', 1899842, 109383],
+		['2011', 1701945, 52096],
+		['2012', 1637740, 83423],
+		['2013', 1615876, 31224],
+		['2014', 1504912, 12991],
+		['2015', 1560592, 58211],
+		          ]);
 
-			/*Customize this column bar chart to add title, width and height*/
+		/*Customize this column bar chart to add title, width and height*/
 
-			var RefgPopnRepatr_ChartStyle = {'title':'More than 10,000 refugees resttled in Buffalo since 2002',
-			'width':700,
-			'height':400
-			};
-			/* Create a variable that will call the data being fed in the columns and rows of the column chart */
+		var RefgPopnRepatr_ChartStyle = {'title':'More than 10,000 refugees resttled in Buffalo since 2002',
+		'width':700,
+		'height':400
+		};
+		/* Create a variable that will call the data being fed in the columns and rows of the column chart */
 
-			var RefgPopnRepatr_ChartFinal = new google.charts.Bar(document.getElementById('RefgPopnRepatr_ChartID'));
+		var RefgPopnRepatr_ChartFinal = new google.charts.Bar(document.getElementById('RefgPopnRepatr_ChartID'));
 
-			/*Execute the column chart*/
-			RefgPopnRepatr_ChartFinal.draw(RefgPopnRepatr, google.charts.Bar.convertOptions(RefgPopnRepatr_ChartStyle));
-			/* End of drawChart function*/
-			}
-			    
-	</script> -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawLineChart);
+		/*Execute the column chart*/
+		RefgPopnRepatr_ChartFinal.draw(RefgPopnRepatr, google.charts.Bar.convertOptions(RefgPopnRepatr_ChartStyle));
+		/* End of drawChart function*/
+		}
+		    
+		</script> -->
+		<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+		<!-- <script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawLineChart);
 
-      function drawLineChart() {
-        var RefgInfo = google.visualization.arrayToDataTable([
-          ['Year', 'Refugee Population', 'Refugee Repatriation'],
-            ['1979', 400000, 0],
-			['1980', 1428230, 0],
-			['1981', 2375330, 0],
-			['1982', 2877480, 0],
-			['1983', 2900000, 0],
-			['1984', 2500000, 0],
-            ['1985', 2729910, 0],
-			['1986', 2878100, 0],
-			['1987', 3156000, 0],
-			['1988', 3254393, 0],
-			['1989', 3272290, 0],
-			['1990', 3253000, 19290],
-			['1991', 3098000, 175000],
-            ['1992', 1627000, 1360000],
-			['1993', 1476876, 0],
-			['1994', 1053000, 102658],
-			['1995', 1200000, 153274],
-			['1996', 1200000, 140390],
-			['1997', 1200000, 84500],
-            ['1998', 1200000, 93000],
-			['1999', 1200000, 91834],
-			['2000', 2000000, 76773],
-			['2001', 2197821, 8000],
-			['2002', 1226569, 1569248],
-			['2003', 1123647, 375526],
-            ['2004', 1290408, 424477],
-			['2005', 1084208, 461118],
-			['2006', 1043984, 143019],
-			['2007', 2034416, 365663],
-			['2008', 1780150, 274200],
-			['2009', 1739935, 51290],
-			['2010', 1899842, 109383],
-			['2011', 1701945, 52096],
-			['2012', 1637740, 83423],
-			['2013', 1615876, 31224],
-			['2014', 1504912, 12991],
-			['2015', 1560592, 58211],
-          ]);
+function drawLineChart() {
+var RefgInfo = google.visualization.arrayToDataTable([
+['Year', 'Refugee Population', 'Refugee Repatriation'],
+['1979', 400000, 0],
+['1980', 1428230, 0],
+['1981', 2375330, 0],
+['1982', 2877480, 0],
+['1983', 2900000, 0],
+['1984', 2500000, 0],
+['1985', 2729910, 0],
+['1986', 2878100, 0],
+['1987', 3156000, 0],
+['1988', 3254393, 0],
+['1989', 3272290, 0],
+['1990', 3253000, 19290],
+['1991', 3098000, 175000],
+['1992', 1627000, 1360000],
+['1993', 1476876, 0],
+['1994', 1053000, 102658],
+['1995', 1200000, 153274],
+['1996', 1200000, 140390],
+['1997', 1200000, 84500],
+['1998', 1200000, 93000],
+['1999', 1200000, 91834],
+['2000', 2000000, 76773],
+['2001', 2197821, 8000],
+['2002', 1226569, 1569248],
+['2003', 1123647, 375526],
+['2004', 1290408, 424477],
+['2005', 1084208, 461118],
+['2006', 1043984, 143019],
+['2007', 2034416, 365663],
+['2008', 1780150, 274200],
+['2009', 1739935, 51290],
+['2010', 1899842, 109383],
+['2011', 1701945, 52096],
+['2012', 1637740, 83423],
+['2013', 1615876, 31224],
+['2014', 1504912, 12991],
+['2015', 1560592, 58211],
+]);
 
-        var LineChartFeatures = {
-          title: 'How the refugee population has been changing over the years in Pakistan',
-          curveType: 'function',
-          colors : ['#e6550d', '#2b8cbe'],
-          legend: { position: 'bottom' }
-        };
+var LineChartFeatures = {
+title: 'How the refugee population has been changing over the years in Pakistan',
+curveType: 'function',
+colors : ['#e6550d', '#2b8cbe'],
+legend: { position: 'bottom' }
+};
 
-        var chart = new google.visualization.LineChart(document.getElementById('RefgLineChart'));
+var chart = new google.visualization.LineChart(document.getElementById('RefgLineChart'));
 
-        chart.draw(RefgInfo, LineChartFeatures);
-      }
-    </script>
+chart.draw(RefgInfo, LineChartFeatures);
+}
+		</script> -->
 
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+		<!-- <script type="text/javascript">
 			google.charts.load('current', {
 				'packages' : ['corechart']
 			});
@@ -201,7 +201,7 @@
 				var chart = new google.visualization.PieChart(document.getElementById('RepatriationPieChart'));
 				chart.draw(PieChartInfo, PieChartFeatures);
 			}
-		</script>
+		</script> -->
 
 		<style class="js-loggable">
 			.svg .i, .svg .caption:before, .svg figcaption:before, .svg blockquote.quoted:before {
@@ -582,15 +582,13 @@
 									</li>
 								</ul>
 								<ul class="navigation-group navigation-group--contrast secondary-navigation">
-									<li class="navigation-group__item js-editionalise-secondary-nav" data-edition="us">
-										<a href="https://membership.theguardian.com/us/supporter?INTCMP=mem_us_web_newheader" data-link-name="nav2 : become a supporter"> Become a supporter </a>
+
 									</li>
-									<li class="navigation-group__item js-editionalise-secondary-nav" data-edition="us">
-										<a href="https://subscribe.theguardian.com/us?INTCMP=NGW_NEWHEADER_us_GU_SUBSCRIBE" data-link-name="nav2 : subscribe"> Subscribe </a>
+
 									</li>
 									<li class="navigation-group__item navigation-group__item--user-account js-show-user-account-links">
 										<div class="user-account__login">
-											<a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_HEADER_SIGNIN" data-link-name="nav2 : sign in"> Sign in/up </a>
+
 										</div>
 										<div class="user-account__signed-in">
 											<details>
@@ -711,10 +709,6 @@
 						<div class="l-header-pre u-cf">
 							<div class="brand-bar">
 								<div class="brand-bar__item brand-bar__item--profile popup-container has-popup js-profile-nav" data-component="identity-profile">
-									<a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_HEADER_SIGNIN" data-link-name="User profile" data-toggle="popup--profile" data-toggle-signed-in="true" class="brand-bar__item--action popup__toggle" data-test-id="sign-in-link" aria-haspopup="true"> <span class="inline-profile-36 inline-icon rounded-icon control__icon-wrapper">
-										<svg width="18" height="18" viewBox="0 0 18 18" class="rounded-icon__svg control__icon-wrapper__svg inline-profile-36__svg inline-icon__svg">
-											<path d="M9 7.3c1.6 0 3.4-1.8 3.4-3.9S11.1 0 9 0 5.6 1.3 5.6 3.4s2 3.9 3.4 3.9zm5.9 3.4l-.9-.8c-1.7-.6-3.1-.9-5-.9s-3.3.3-5 .9l-.9.9L1 17.2l.9.8h14.3l.9-.9-2.2-6.4z"></path>
-										</svg> </span> <span class="js-profile-info control__info" data-test-id="sign-in-name">sign in</span> </a>
 									<div class="js-profile-popup">
 										<ul class="popup popup--default popup__group popup--profile is-off" data-link-name="Sub Sections" data-test-id="popup-profile">
 											<li class="popup__item">
@@ -734,21 +728,6 @@
 											</li>
 										</ul>
 									</div>
-								</div>
-								<div class="brand-bar__item has-popup brand-bar__item--has-control
-								popup-container brand-bar__item--subscribe
-								hide-on-slim-header hide-on-tablet" data-component="subscribe">
-									<span class="inline-marque-36 inline-icon rounded-icon control__icon-wrapper">
-										<svg width="36" height="36" viewBox="0 0 36 36" class="rounded-icon__svg control__icon-wrapper__svg inline-marque-36__svg inline-icon__svg">
-											<path d="M21.3 8.8c0-4.9-1.5-5.7-3.3-5.7-1.8 0-3.2.7-3.2 5.7s1.5 5.5 3.2 5.5c1.8-.1 3.3-.6 3.3-5.5m-6.5 18.8c-2.3 0-2.9 1.7-2.9 2.9 0 1.8 1.6 3.4 6.3 3.4 5.3 0 6.8-1.5 6.8-3.4 0-1.7-1.3-2.9-3.4-2.9h-6.8zM10.5 2.4C4.3 5.2 0 11.4 0 18.7c0 4.9 2 9.4 5.2 12.6V31c0-3.2 3.1-4.4 5.9-5-2.6-.6-3.9-2.5-3.9-4.4 0-2.6 2.9-4.8 4.3-5.8l-.2-.1c-2.5-1.4-4.1-3.8-4.1-7 0-2.7 1.2-4.9 3.3-6.3M36 18.8C36 11.4 31.5 5 25.1 2.3c2.1 1.4 3.4 3.5 3.5 6.3l.1.6c0 5.4-4.4 8.2-10.7 8.2-1.6 0-2.7-.1-4.1-.5-.6.4-1.1 1.1-1.1 1.8 0 .9.8 1.6 1.8 1.6h8.8c5.5 0 8.2 2.2 8.2 7.1 0 1.6-.3 3.1-1 4.3 3.3-3.4 5.4-7.9 5.4-12.9"></path>
-										</svg> </span>
-									<a href="https://membership.theguardian.com/supporter?countryGroup=us&amp;INTCMP=DOTCOM_HEADER_BECOMEMEMBER_US" data-link-name="Register link" class="brand-bar__item--action brand-bar__item--split--first js-become-member"> <span class="control__info js-control-info control__info--supporting">become a supporter</span> </a><a href="https://subscribe.theguardian.com/us?INTCMP=NGW_HEADER_US_GU_SUBSCRIBE" class="brand-bar__item--action brand-bar__item--split--last js-subscribe" data-link-name="us : topNav : subscribe"> <span class="control__info js-control-info">subscribe</span> </a>
-								</div>
-								<div class="brand-bar__item has-popup popup-container brand-bar__item--search" data-component="search">
-									<a href="https://www.google.co.uk/advanced_search?q=site:www.theguardian.com" data-is-ajax="" data-link-name="Search icon" class="brand-bar__item--action popup__toggle js-search-toggle js-toggle-ready" data-toggle="popup--search" aria-haspopup="true"> <span class="inline-search-36 inline-icon rounded-icon control__icon-wrapper">
-										<svg width="18" height="18" viewBox="0 0 18 18" class="rounded-icon__svg control__icon-wrapper__svg inline-search-36__svg inline-icon__svg">
-											<path d="M6.5 1.6c2.7 0 4.9 2.2 4.9 4.9s-2.2 4.9-4.9 4.9-4.9-2.2-4.9-4.9 2.2-4.9 4.9-4.9m0-1.6C2.9 0 0 2.9 0 6.5S2.9 13 6.5 13 13 10.1 13 6.5 10.1 0 6.5 0zm6.6 11.5l4.9 4.9-1.6 1.6-4.9-4.9v-.8l.8-.8h.8z"></path>
-										</svg> </span> <span class="control__info">search</span> </a>
 								</div>
 								<div class="brand-bar__item--right" data-component="guardian-services">
 									<div class="brand-bar__item brand-bar__item--jobs hide-until-tablet hide-on-slim-header">
@@ -1064,32 +1043,21 @@
 										</ul>
 									</div>
 									<div class="meta__numbers">
-										<div class="meta__number js-sharecount" title="Facebook: 334">
-											<h3 class="sharecount__heading"><span class="inline-share inline-icon">
-												<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-													<path d="M10.073 8.4c-.475 0-.906.19-1.225.497l-5.308-2.676.015-.221-.015-.221 5.308-2.676c.319.308.75.497 1.225.497.982 0 1.778-.806 1.778-1.8s-.796-1.8-1.778-1.8-1.778.806-1.778 1.8l.016.233-5.299 2.675c-.32-.313-.755-.507-1.236-.507-.982 0-1.778.806-1.778 1.8s.796 1.8 1.778 1.8c.48 0 .915-.194 1.236-.507l5.299 2.675-.016.233c0 .994.796 1.8 1.778 1.8s1.778-.806 1.778-1.8-.796-1.8-1.778-1.8zm0-7.68c.588 0 1.067.484 1.067 1.08 0 .596-.479 1.08-1.067 1.08s-1.067-.484-1.067-1.08c0-.596.479-1.08 1.067-1.08zm0 10.56c-.588 0-1.067-.484-1.067-1.08 0-.596.479-1.08 1.067-1.08s1.067.484 1.067 1.08c0 .596-.479 1.08-1.067 1.08z"></path>
-												</svg></span><span class="sharecount__text u-h">Shares</span></h3>
-											<div class="sharecount__value sharecount__value--full">
-												334
-											</div>
-											<div class="sharecount__value sharecount__value--short">
-												334
-											</div>
-										</div>
+
 										<div class="u-h meta__number" data-discussion-id="/p/6aqbv" data-commentcount-format="content" data-discussion-closed="true"></div>
 									</div>
 								</div>
 								<p class="byline" data-link-name="byline" data-component="meta-byline">
 									<!-- Adding a link to my own Medium page through the author link - this should be fun! -->
-									
+
 									<span itemscope="" itemtype="http://schema.org/Person" itemprop="author"> <a rel="author" class="tone-colour" itemprop="sameAs" data-link-name="auto tag link" href="https://medium.com/@Samirasadeque"><span itemprop="name">Syeda Samira Sadeque</span></a></span>
 								</p>
 								<p class="content__dateline" aria-hidden="true">
 									<time itemprop="datePublished" datetime="2017-04-21T08:22:14-0400" data-timestamp="1492777334000" class="content__dateline-wpd js-wpd content__dateline-wpd--modified">
-										Friday 21 April 2017 <span class="content__dateline-time">08.22&nbsp;EDT</span>
+										Monday 8 May 2017 <span class="content__dateline-time">08.22&nbsp;EDT</span>
 									</time>
 									<time datetime="2017-04-21T17:00:48-0400" data-timestamp="1492808448000" class="content__dateline-lm js-lm u-h" itemprop="dateModified">
-										Last modified on Friday 21 April 2017 <span class="content__dateline-time">17.00&nbsp;EDT</span>
+										Last modified on Monday 8 May 2017 <span class="content__dateline-time">17.00&nbsp;EDT</span>
 									</time>
 								</p>
 								<meta itemprop="dateModified" content="2017-04-21T17:00:48-0400">
@@ -1098,42 +1066,6 @@
 								<p></p>
 								<!-- deleteing the <p></p> here that had the first few lines of the article because it was for some reason pasted here. Why would that be? A bit
 								confusing. Anyway, deleted that -->
-
-<p class="byline" data-link-name="byline" data-component="meta-byline">
-								<span itemscope="" itemtype="http://schema.org/Person" itemprop="author"> <a rel="author" class="tone-colour" itemprop="sameAs" data-link-name="auto tag link" <span="">Syeda Samira Sadeque
-									</a></span></p>
-
-								<aside class="element element-rich-link element--thumbnail element-rich-link--upgraded" data-component="rich-link" data-link-name="rich-link-1 | 1">
-									<div class="rich-link tone-news--item ">
-										<div class="rich-link__container">
-											<div class="rich-link__image-container u-responsive-ratio">
-												<!-- <img src="https://i.guim.co.uk/img/media/0ac7138a9d69bc511109ea680da4dda0e725c024/0_93_3500_2100/master/3500.jpg?w=460&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=9447a971a4b1c69e6734821b5fcac03f" itemprop="contentURL"> -->
-												<img src="http://www.columbia.edu/~ra2854/LandingPagePic.JPG" alt="">
-
-											</div>
-											
-											
-											<div class="rich-link__header">
-												<h1 class="rich-link__title"><a class="rich-link__link">Series: Lives in transit</a></h1>
-											</div>
-											<div class="rich-link__standfirst u-cf">
-												How the different permenant solutions for refugees are working in three different refugee situations
-											</div>
-											<div class="rich-link__read-more">
-												<div class="rich-link__arrow">
-													<span class="inline-arrow-in-circle inline-icon ">
-														<svg width="24" height="24" viewBox="0 0 24 24" class="inline-arrow-in-circle__svg inline-icon__svg">
-															<path class="rich-link__arrow-icon" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m.21 19l-.637-.668 4.888-6.326H4.996v-1.01h11.465l-4.888-6.333.637-.668L19 11.153v.685l-6.79 7.157" fill="#005689" fill-rule="evenodd"></path>
-														</svg> </span>
-												</div>
-												<div class="rich-link__read-more-text">
-													Read more
-												</div>
-											</div>
-											<a class="rich-link__link u-faux-block-link__overlay" href="https://www.theguardian.com/world/2017/feb/27/ngo-rescues-off-libya-encourage-traffickers-eu-borders-chief"></a>
-										</div>
-									</div>
-								</aside>
 
 								<div class="row">
 
@@ -1144,177 +1076,188 @@
 									</div>
 								</div>
 
-								<p>Last August, at the crack of dawn the day after Pakistan celebrated its 68th independence day, Nowshad Asghar and his family of 19 got on a bus with their belongings and took off. </p>
-									<p>They were on their way to Afghanistan – a place they called home, but a place that was a foreign land to them.</p>
-									<p>“My father planned it. We put our family on the bus and out side [on top] we put the tools, the required things for the house – blankets and kitchen wares,” recalls Asghar. “And we started.”</p>
-<p> He remembers the journey being quite smooth, with no obstacles, except that it took them nearly twelve hours to reach their hometown in Jalalabad in the province of Nangarhar, where they currently live. The long journey made the children thirsty because it was so hot, recalls Asghar.</p>
-<p>Asghar’s family, who had been living in Peshawar for decades, was among the thousands of Afghan refugees who moved to Afghanistan under increasing government pressure and harassment from law enforcers in Pakistan.</p>
-							<p>Last year, around 371,000 registered afghan refugees went back to Afghanistan, in a process facilitated by the UNHCR, says Duniya Aslam Khan, a spokesperson for UNHCR Pakistan. A February 2017 Human Rights Watch report puts the number further states that 200,000 of the country’s estimated 1 million undocumented Afghans were also pushed out due to “a toxic combination of deportation threats and police abuses.”</p>
-										<p>The Afghan refugees have been in Pakistan since 1978, following a communist take-over of their country. Since then, thousands of Afghans have relocated to Pakistan, mostly along the stretch of the country’s western border. The peak of the Afghan refugee exodus was in 1980, with 80,000-90,000 refugees crossing the border every month. By 1989, according to UNHCR, the total number of Afghan refugees in Pakistan was more than 3% of the country’s total population - 3,270,000. According to a 2016 BBC report, nearly 1.4 million Afghan refugees are estimated to be in Pakistan, with a million more unregistered refugees.</p>
-										
-										<!-- this is where I want to insert my first chart. I feel that it would be visually appealing to have this here,
-											and also it's relevant to the information here. 
-											I drew this chart using google visualization. The information is from data.unhcr.org 
-											I felt that a line chart would show the number of refugees in comparison with the number returning --> 
-								
-										<div class="row">
+								<p>
+									Last August, at the crack of dawn the day after Pakistan celebrated its 68th independence day, Nowshad Asghar and his family of 19 got on a bus with their belongings and took off.
+								</p>
+								<p>
+									They were on their way to Afghanistan – a place they called home, but a place that was a foreign land to them.
+								</p>
+								<p>
+									“My father planned it. We put our family on the bus and out side [on top] we put the tools, the required things for the house – blankets and kitchen wares,” recalls Asghar. “And we started.”
+								</p>
+								<p>
+									He remembers the journey being quite smooth, with no obstacles, except that it took them nearly twelve hours to reach their hometown in Jalalabad in the province of Nangarhar, where they currently live. The long journey made the children thirsty because it was so hot, recalls Asghar.
+								</p>
+								<p>
+									Asghar’s family, who had been living in Peshawar for decades, was among the thousands of Afghan refugees who moved to Afghanistan under increasing government pressure and harassment from law enforcers in Pakistan.
+								</p>
+								<p>
+									Last year, around 371,000 registered afghan refugees went back to Afghanistan, in a process facilitated by the UNHCR, says Duniya Aslam Khan, a spokesperson for UNHCR Pakistan. A February 2017 Human Rights Watch report puts the number further states that 200,000 of the country’s estimated 1 million undocumented Afghans were also pushed out due to “a toxic combination of deportation threats and police abuses.”
+								</p>
+								<p>
+									The Afghan refugees have been in Pakistan since 1978, following a communist take-over of their country. Since then, thousands of Afghans have relocated to Pakistan, mostly along the stretch of the country’s western border. The peak of the Afghan refugee exodus was in 1980, with 80,000-90,000 refugees crossing the border every month. By 1989, according to UNHCR, the total number of Afghan refugees in Pakistan was more than 3% of the country’s total population - 3,270,000. According to a 2016 BBC report, nearly 1.4 million Afghan refugees are estimated to be in Pakistan, with a million more unregistered refugees.
+								</p>
+
+								<!-- this is where I want to insert my first chart. I feel that it would be visually appealing to have this here,
+								and also it's relevant to the information here.
+								I drew this chart using google visualization. The information is from data.unhcr.org
+								I felt that a line chart would show the number of refugees in comparison with the number returning -->
+
+								<div class="row">
 									<div class="col-md-6">
-										
-										<div id="RefgLineChart" style="width: 750px; height: 500px"></div>
-									
-										
+
+										<div id="RefgLineChart" style="width: 500px; height: 500px"></div>
+
 									</div>
 								</div>
-										 
-									<p>Data Source: UNHCR</p>
-									
-									<!-- it would be good to have a sub-head here since there's a huge text chunk but I think for now we'll go
-										without one because there's a separate section coming up soon --> 
-										
-										<p>Even though there are allegations by rights groups such as Human Rights Watch that the refugees are being harassed to leave Pakistan, UNHCR says that there are multiple other reasons.</p>
-<p>Khan from UNHCR says last year’s huge number of repatriation was the result of a recent border regulation passed by the Pakistani government. Until June 2016, the Afghan-Pakistan border was nearly open, allowing cross-border movements without any valid passport or visa. This was convenient for the thousands of families whose relatives either worked or lived on either side of the border. </p>
-<p>“In many Afghan families, either the head of household is working in Kabul with their families in Pakistan, or vice verse, so it used to be convenient for them to visit their families once in two months or so,” says Khan. “After the border regulation, the free movement was stopped and that’s why many refugee families decided it was now time for them to go back. Because they couldn’t visit their families freely.”</p>
-								
+		
+								<figcaption class="caption caption--main caption--img" itemprop="description">
+								Source: UNHCR
+								</figcaption>
+							
+								<!-- it would be good to have a sub-head here since there's a huge text chunk but I think for now we'll go
+								without one because there's a separate section coming up soon -->
+
+								<p>Even though there are allegations by rights groups such as Human Rights Watch that the refugees are being harassed to leave Pakistan, UNHCR says that there are multiple other reasons.</p>
+								<p>Khan from UNHCR says last year’s huge number of repatriation was the result of a recent border regulation passed by the Pakistani government. Until June 2016, the Afghan-Pakistan border was nearly open, allowing cross-border movements without any valid passport or visa. This was convenient for the thousands of families whose relatives either worked or lived on either side of the border. </p>
+								<p>“In many Afghan families, either the head of household is working in Kabul with their families in Pakistan, or vice verse, so it used to be convenient for them to visit their families once in two months or so,” says Khan. “After the border regulation, the free movement was stopped and that’s why many refugee families decided it was now time for them to go back. Because they couldn’t visit their families freely.”</p>
+
 								<!-- Now it's appropriate to put a subhead --->
-								
-<h4>In a land of joblessness, ‘everything possible’ </h4>
-								
-<!-- I originally used <h2></h2> tag here but then realized that it's too big for a sub-heading. 
-	I think the <h3></h3> is a much more appropriate size for whar we're aiming for. It would be nice
-	to have it a bit more consistent with the Guardian style, but for now this is good I think -->
-								
+
+								<h4>In a land of joblessness, ‘everything possible’ </h4>
+
+								<!-- I originally used <h2></h2> tag here but then realized that it's too big for a sub-heading.
+								I think the <h3></h3> is a much more appropriate size for whar we're aiming for. It would be nice
+								to have it a bit more consistent with the Guardian style, but for now this is good I think -->
+
 								<!-- NOTE: After experimenting with it, decided to change all sub-heads to <h4></h4> -->
 
 								<p>
-									The Afghan refugees returning are at difficult crossroads – back in Pakistan, they held stable jobs, often becoming indispensible for the local communities. Today, in Afghanistan, most of them are jobless. 
-									</p>
-									
-									<p>“[The refugees] have formed a very integral part of informal economy – one that has a bigger share of the pie,” says Amber Shamsi Rahim, a journalist in Islamabad. “In Khyber Pakhtunkhwa (KP), which is a northern province that is contiguous with Afghanistan, many of them are still there and have worked as laborers, in markets.” </p>
-									<p>Despite the Afghan refugees making up a big part of the informal workforce, there has not been any research done to examine their contribution to the local economy. However, the local communities’ dependence on the Afghan refugees is a sign of how integral they are to the workforce. </p>
- <p>“Pakistan businesses were so dependent on Afghans, or Pakistanis living in the area were so dependent on Afghan refugees, that local level officials have been pleading with higher level officials to stop this [repatriation],” says Gerry Simpson, a senior refugee researcher and advocate at Human Rights Watch. 
+								The Afghan refugees returning are at difficult crossroads – back in Pakistan, they held stable jobs, often becoming indispensible for the local communities. Today, in Afghanistan, most of them are jobless.
+								</p>
 
-</p>
+								<p>“[The refugees] have formed a very integral part of informal economy – one that has a bigger share of the pie,” says Amber Shamsi Rahim, a journalist in Islamabad. “In Khyber Pakhtunkhwa (KP), which is a northern province that is contiguous with Afghanistan, many of them are still there and have worked as laborers, in markets.” </p>
+								<p>Despite the Afghan refugees making up a big part of the informal workforce, there has not been any research done to examine their contribution to the local economy. However, the local communities’ dependence on the Afghan refugees is a sign of how integral they are to the workforce. </p>
+								<p>“Pakistan businesses were so dependent on Afghans, or Pakistanis living in the area were so dependent on Afghan refugees, that local level officials have been pleading with higher level officials to stop this [repatriation],” says Gerry Simpson, a senior refugee researcher and advocate at Human Rights Watch.
 
-<p>Back in Pakistan, Asghar and his two brothers ran a juice store, and had a steady income. They earned about Rs 25,000 per month, which he says was enough for their family. </p>
- 
- <p>Now, in Afghanistan, they’ve been jobless for nine months. Asghar says they want to work but there aren’t any jobs. His family, which includes his father, two brothers, their wives, and their 12 children, runs on savings they made when they were in Pakistan.</p>
+								</p>
 
-<p>
-	“They are not coming in thousands, they are in millions,” says Ahmad Ali, provincial council chief of Nangarhar, adding that the Afghan government is not prepared for such a huge influx of returnees. “We don’t have any jobs for them at the moment.” 
-</p>
+								<p>Back in Pakistan, Asghar and his two brothers ran a juice store, and had a steady income. They earned about Rs 25,000 per month, which he says was enough for their family. </p>
 
-<p>
-	Ali worries that in the long-run, this might drive the returnees in the wrong direction.  
-</p>
+								<p>Now, in Afghanistan, they’ve been jobless for nine months. Asghar says they want to work but there aren’t any jobs. His family, which includes his father, two brothers, their wives, and their 12 children, runs on savings they made when they were in Pakistan.</p>
 
-<p> “If the Afghan government fails to provide jobs for the refugees, then this is going to be a next problem for us,” he says. “Because if you’re jobless, you’ll do anything. Some of them will go to Taliban, some will go to the Daesh (ISIS) and some of them will join the gangs – everything is possible.”</p>
- 
- <!-- just like the last time, we'll use <h3></h3> here because it's more appropriate -->
- <!-- never mind - I discovered <h4> </h4> which is even better and more approrpriate so changing all my 
- 	sub-heads to <h4> -->
- 
- <h4>Not enough schools for returnee children </h4>
- <p>
- 	
- 	<!-- I was not too sure about starting a section with a visual but I think the piece has been text heavy so far
- 		so it's a good time for a visual. Also, it goes nicely with the rest of the text
- 		and offers context to the reader for what they're about to read, so I think it goes here quite well -->
- <img src="http://www.columbia.edu/~ra2854/AfghanChildrenMapFINAL1.jpg">
- 	<p>Data Source: UNICEF</p>
- 	<!-- saving it as a comment in case i need it later 
- 	<div class="row">
-									<div class="col-md-6">
-										
-										
-										<div id="RepatriationPieChart" style="width: 900px; height: 500px;"></div>
-										
-									</div>
+								<p>
+								“They are not coming in thousands, they are in millions,” says Ahmad Ali, provincial council chief of Nangarhar, adding that the Afghan government is not prepared for such a huge influx of returnees. “We don’t have any jobs for them at the moment.”
+								</p>
+
+								<p>
+								Ali worries that in the long-run, this might drive the returnees in the wrong direction.
+								</p>
+
+								<p> “If the Afghan government fails to provide jobs for the refugees, then this is going to be a next problem for us,” he says. “Because if you’re jobless, you’ll do anything. Some of them will go to Taliban, some will go to the Daesh (ISIS) and some of them will join the gangs – everything is possible.”</p>
+
+								<!-- just like the last time, we'll use <h3></h3> here because it's more appropriate -->
+								<!-- never mind - I discovered <h4> </h4> which is even better and more approrpriate so changing all my
+								sub-heads to <h4> -->
+
+								<h4>Not enough schools for returnee children </h4>
+								<p>
+
+								<!-- I was not too sure about starting a section with a visual but I think the piece has been text heavy so far
+								so it's a good time for a visual. Also, it goes nicely with the rest of the text
+								and offers context to the reader for what they're about to read, so I think it goes here quite well -->
+								<img src="http://www.columbia.edu/~sss2256/RefugeesPakProvince.png" width = "700" height = "500">
+								<figcaption class="caption caption--main caption--img" itemprop="description">
+								Source: UNHCR
+								</figcaption>
+								<!-- saving it as a comment in case i need it later
+								<div class="row">
+								<div class="col-md-6">
+
+								<div id="RepatriationPieChart" style="width: 900px; height: 500px;"></div>
+
 								</div>
- 	
- 	</p>			-->
- 
- 
- <p>
- 	Asghar remembers the children would go to school regularly. HE himself had been educated in Pakistan. But here in Afghanistan, he worries his nieces and nephews are not getting any quality education because there aren’t enough schools in Afghanistan for the repatriating Pakistani communities. 
- 	
- </p>
- 
- <p>Even though there are more than 600 schools in Nangarhar, Ali admits there aren’t enough to accommodate all the children coming in. Between January 2016 and March 2017, Nangarhar saw the largest number of children returnees. </p>
- 
- <p>“It’s a good thing that refugees are returning to their own home, we’re happy about that. But the problem is that we can’t provide them with even the basic needs such as education.” </p>
- 
- <p>“Our children are just passing their times, these teachers are also not focusing on their children,” says Asghar. He says there aren’t enough rooms, books, or even pencils for the children at the schools.</p>
- 
- <p>His five-year-old nephew Amanullah goes to school in Jalalabad now, but misses the facilities they had in Pakistan, such as transportation that picked and dropped the children to and from their school. </p>
- 
- <p>Amanullah among 150,125 the children who returned to Pakistan in the past year. </p>
- 
- <p>
-“We don't have that much money to send them to private schools. It’s very expensive over here in Afghanistan,” says Asghar. 
-</p>
- 
- <p>
- 	
- 	<h4>Back in Pakistan, a sense of nostalgia looms </h4>
- 
-<p>Ali says that the Jalalabad is now brimming with returnee refugees. </p>
-<p>“The city is full of refugees. Some are living in the park, some with relatives, you cannot find a house in Nangarhar for rent because of the refugees,” he says. </p>
-<p>Meanwhile, in Pakistan, a sense of nostalgia rings through the streets. The Afghan refugees had become an intricate part of their society. Even though the government has been pushing for them to leave, there is a sense of nostalgia in the streets for the Afghans disappearing from Pakistan’s map.
-	 </p>
-	 <p>“Even in Islamabad and Rawalpindi, there’s a section where a lot of Afghan refugees resided. You still see remnants of it, a bridal shop for instance – because Afghans wear white for their weddings, so it was very distinctive,” recalls Rahim. 
-	 	</p>
-	 	<p>
-But all that might disappear in the years to come as many other Afghans, like Asghar’s family, give in to the harassments and begin packing their bags for a home that they have never even seen. On the other side of the border, the struggle remains to find home in a foreign land. 
-</p>
+								</div>
 
-</p>
-							</div>
+								</p>			-->
 
-							<div class="submeta">
+								<p>
+								Asghar remembers the children would go to school regularly. HE himself had been educated in Pakistan. But here in Afghanistan, he worries his nieces and nephews are not getting any quality education because there aren’t enough schools in Afghanistan for the repatriating Pakistani communities.
+
+								</p>
+
+								<p>Even though there are more than 600 schools in Nangarhar, Ali admits there aren’t enough to accommodate all the children coming in. Between January 2016 and March 2017, Nangarhar saw the largest number of children returnees. </p>
+
+								<p>“It’s a good thing that refugees are returning to their own home, we’re happy about that. But the problem is that we can’t provide them with even the basic needs such as education.” </p>
+
+								<p>“Our children are just passing their times, these teachers are also not focusing on their children,” says Asghar. He says there aren’t enough rooms, books, or even pencils for the children at the schools.</p>
+
+								<p>His five-year-old nephew Amanullah goes to school in Jalalabad now, but misses the facilities they had in Pakistan, such as transportation that picked and dropped the children to and from their school. </p>
+
+								<p>Amanullah among 150,125 the children who returned to Pakistan in the past year. </p>
+
+								<p>
+								“We don't have that much money to send them to private schools. It’s very expensive over here in Afghanistan,” says Asghar.
+								</p>
+
+								<p>
+
+								<h4>Back in Pakistan, a sense of nostalgia looms </h4>
+
+								<p>Ali says that the Jalalabad is now brimming with returnee refugees. </p>
+								<p>“The city is full of refugees. Some are living in the park, some with relatives, you cannot find a house in Nangarhar for rent because of the refugees,” he says. </p>
+								<p>Meanwhile, in Pakistan, a sense of nostalgia rings through the streets. The Afghan refugees had become an intricate part of their society. Even though the government has been pushing for them to leave, there is a sense of nostalgia in the streets for the Afghans disappearing from Pakistan’s map.
+								</p>
+								<p>“Even in Islamabad and Rawalpindi, there’s a section where a lot of Afghan refugees resided. You still see remnants of it, a bridal shop for instance – because Afghans wear white for their weddings, so it was very distinctive,” recalls Rahim.
+								</p>
+								<p>
+								But all that might disappear in the years to come as many other Afghans, like Asghar’s family, give in to the harassments and begin packing their bags for a home that they have never even seen. On the other side of the border, the struggle remains to find home in a foreign land.
+								</p>
+
+								</p>
+								</div>
+
+								<div class="submeta">
 								<span class="submeta_label">Topics</span>
-								
-					
-<div class="submeta__keywords">
 
+								<div class="submeta__keywords">
 
-										<ul class="submeta__links">
+								<ul class="submeta__links">
 
-										<li class="submeta__link-item">
+								<li class="submeta__link-item">
 
-										<a class="submeta__link" href="https://www.theguardian.com/world/migration" data-link-name="keyword: world/migration">
+								<a class="submeta__link" href="https://www.theguardian.com/world/migration" data-link-name="keyword: world/migration">
 
-										Migration
+								Migration
 
-										</a>
+								</a>
 
-										</li>
+								</li>
 
-										<li class="submeta__link-item">
+								<li class="submeta__link-item">
 
-										<a class="submeta__link" href="https://www.theguardian.com/world/pakistan" data-link-name="keyword: world/pakistan">
+								<a class="submeta__link" href="https://www.theguardian.com/world/pakistan" data-link-name="keyword: world/pakistan">
 
-										More from Pakistan
+								More from Pakistan
 
-										</a>
+								</a>
 
-										</li>
+								</li>
 
-										<li class="submeta__link-item">
+								<li class="submeta__link-item">
 
-										<a class="submeta__link" href="https://www.theguardian.com/world/refugees" data-link-name="keyword: world/refugees">
+								<a class="submeta__link" href="https://www.theguardian.com/world/refugees" data-link-name="keyword: world/refugees">
 
-										More on the global refugee crisis
+								More on the global refugee crisis
 
-										</a>
+								</a>
 
-										</li>
+								</li>
 
-									
-										</a>
-										</li>
-										</ul>
-										</div>
-
+								</a>
+								</li>
+								</ul>
+								</div>
 
 								<!-- This is where I added my bottom buttons with "other stories" and links to similar stories. But when I insert it as a code, it messes up the layout of the page
 								so I'm going to post it here as a comment so that I don't lose the code:
@@ -1362,125 +1305,118 @@ But all that might disappear in the years to come as many other Afghans, like As
 
 								-->
 
-								<div data-component="share" class="submeta__share">
-									<ul class="social social--bottom js-social--bottom u-unstyled u-cf" data-component="social">
-										<li class="social__item social__item--facebook " data-link-name="facebook">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://www.facebook.com/dialog/share?app_id=180444840287&amp;href=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_fb" target="_blank" title="Facebook"> <span class="inline-icon__fallback button share-modal__item share-modal__item--facebook">Share on Facebook</span> <span class="inline-share-facebook inline-icon rounded-icon centered-icon social-icon social-icon--facebook">
-												<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--facebook__svg inline-share-facebook__svg inline-icon__svg">
-													<path d="M17.9 14h-3v8H12v-8h-2v-2.9h2V8.7C12 6.8 13.1 5 16 5c1.2 0 2 .1 2 .1v3h-1.8c-1 0-1.2.5-1.2 1.3v1.8h3l-.1 2.8z"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--twitter " data-link-name="twitter">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://twitter.com/intent/tweet?text=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_tw" target="_blank" title="Twitter"> <span class="inline-icon__fallback button share-modal__item share-modal__item--twitter">Share on Twitter</span> <span class="inline-share-twitter inline-icon rounded-icon centered-icon social-icon social-icon--twitter">
-												<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--twitter__svg inline-share-twitter__svg inline-icon__svg">
-													<path d="M21.3 10.5v.5c0 4.7-3.5 10.1-9.9 10.1-2 0-3.8-.6-5.3-1.6.3 0 .6.1.8.1 1.6 0 3.1-.6 4.3-1.5-1.5 0-2.8-1-3.3-2.4.2 0 .4.1.7.1l.9-.1c-1.6-.3-2.8-1.8-2.8-3.5.5.3 1 .4 1.6.4-.9-.6-1.6-1.7-1.6-2.9 0-.6.2-1.3.5-1.8 1.7 2.1 4.3 3.6 7.2 3.7-.1-.3-.1-.5-.1-.8 0-2 1.6-3.5 3.5-3.5 1 0 1.9.4 2.5 1.1.8-.1 1.5-.4 2.2-.8-.3.8-.8 1.5-1.5 1.9.7-.1 1.4-.3 2-.5-.4.4-1 1-1.7 1.5z"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--email " data-link-name="email">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="mailto:?subject=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;body=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_link" target="_blank" title="Email"> <span class="inline-icon__fallback button share-modal__item share-modal__item--email">Share via Email</span> <span class="inline-share-email inline-icon rounded-icon centered-icon social-icon social-icon--email">
-												<svg width="32" height="32" viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--email__svg inline-share-email__svg inline-icon__svg">
-													<path d="M23.363 20.875H8.637v-8.938l6.545 5.687h1.637l6.544-5.687v8.938zm-1.635-9.75L16 16l-5.728-4.875h11.456zM23.363 9.5H8.637L7 11.125v9.75L8.637 22.5h14.727L25 20.875v-9.75L23.363 9.5z"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--linkedin " data-link-name="linkedin">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="LinkedIn"> <span class=" u-h ">Share on LinkedIn</span> <span class="inline-share-linkedin inline-icon rounded-icon centered-icon social-icon social-icon--linkedin">
-												<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--linkedin__svg inline-share-linkedin__svg inline-icon__svg">
-													<path d="M10.576 7.985a1.57 1.57 0 0 1 0 3.137 1.568 1.568 0 0 1 0-3.137zm-1.353 4.327h2.706v8.704H9.223v-8.704zm4.403 0h2.595v1.19h.037c.361-.685 1.244-1.407 2.56-1.407 2.737 0 3.243 1.803 3.243 4.147v4.774h-2.702v-4.232c0-1.01-.02-2.308-1.406-2.308-1.408 0-1.623 1.1-1.623 2.235v4.305h-2.704v-8.704"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--pinterest " data-link-name="pinterest">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.pinterest.com/pin/find/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="Pinterest"> <span class=" u-h ">Share on Pinterest</span> <span class="inline-share-pinterest inline-icon rounded-icon centered-icon social-icon social-icon--pinterest">
-												<svg viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--pinterest__svg inline-share-pinterest__svg inline-icon__svg">
-													<path d="M16.363 8C12.133 8 10 11.13 10 13.74c0 1.582.58 2.988 1.823 3.512.204.086.387.003.446-.23.04-.16.137-.568.18-.737.06-.23.037-.312-.127-.513-.36-.436-.588-1-.588-1.802 0-2.322 1.684-4.402 4.384-4.402 2.39 0 3.703 1.508 3.703 3.522 0 2.65-1.136 4.887-2.822 4.887-.93 0-1.628-.795-1.405-1.77.268-1.165.786-2.42.786-3.262 0-.752-.39-1.38-1.2-1.38-.952 0-1.716 1.017-1.716 2.38 0 .867.284 1.454.284 1.454l-1.146 5.006c-.34 1.487-.05 3.31-.026 3.493.014.108.15.134.21.05.09-.117 1.223-1.562 1.61-3.006.108-.41.625-2.526.625-2.526.31.61 1.215 1.145 2.176 1.145 2.862 0 4.804-2.693 4.804-6.298C22 10.54 19.763 8 16.363 8"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--gplus " data-link-name="gplus">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_gp&amp;amp;hl=en-GB&amp;amp;wwc=1" target="_blank" title="Google plus"> <span class=" u-h ">Share on Google+</span> <span class="inline-share-gplus inline-icon rounded-icon centered-icon social-icon social-icon--gplus">
-												<svg width="32" height="32" viewBox="4 -4 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--gplus__svg inline-share-gplus__svg inline-icon__svg">
-													<path d="M8.8 12c-.1 2.9 2 5.7 4.7 6.6 2.6.9 5.8.2 7.5-2 1.3-1.6 1.6-3.6 1.4-5.6h-6.7v2.4h4c-.3 1.2-1.1 2.2-2.3 2.7-2.3 1-5.1-.3-5.8-2.7-.9-2.3.5-5 2.9-5.7 1.4-.5 2.9.1 4.1.8l1.8-1.8c-1.4-1.2-3.2-1.9-5-1.7-3.6.1-6.8 3.4-6.6 7zm18-3v2h-2v2h2v2h2v-2h2v-2h-2V9h-2z"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--whatsapp " data-link-name="whatsapp">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="whatsapp://send?text=%22Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean%22%20https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_wa" target="_blank" title="WhatsApp"> <span class=" u-h ">Share on WhatsApp</span> <span class="inline-share-whatsapp inline-icon rounded-icon centered-icon social-icon social-icon--whatsapp">
-												<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--whatsapp__svg inline-share-whatsapp__svg inline-icon__svg">
-													<path d="M22.09 7.87a9.9 9.9 0 0 0-7.05-2.92c-5.49 0-9.96 4.47-9.96 9.96 0 1.75.46 3.47 1.33 4.98L5 25.04l5.28-1.38c1.45.79 3.09 1.21 4.76 1.21 5.49 0 9.96-4.47 9.96-9.96a9.92 9.92 0 0 0-2.91-7.04m-7.05 15.32c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.19 8.19 0 0 1-1.26-4.41c0-4.56 3.71-8.27 8.28-8.27 2.21 0 4.29.86 5.85 2.43a8.222 8.222 0 0 1 2.42 5.85c0 4.56-3.72 8.27-8.28 8.27m4.54-6.2c-.25-.12-1.47-.73-1.7-.81s-.39-.12-.56.12c-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23a7.283 7.283 0 0 1-1.38-1.72c-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.66.31-.22.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.57.12.17 1.75 2.68 4.25 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18s.21-1.08.14-1.18c-.06-.08-.23-.14-.48-.27"></path>
-												</svg> </span> </a>
-										</li>
-										<li class="social__item social__item--messenger " data-link-name="messenger">
-											<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="fb-messenger://share?link=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_me&amp;app_id=180444840287" target="_blank" title="Messenger"> <span class=" u-h ">Share on Messenger</span> <span class="inline-share-messenger inline-icon rounded-icon centered-icon social-icon social-icon--messenger">
-												<svg width="66" height="66" viewBox="-12 -12 90 90" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--messenger__svg inline-share-messenger__svg inline-icon__svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M33 61.1c-3.6 0-7.1-.5-10.4-1.5L10.1 66V52.5C3.9 47 0 39.2 0 30.6 0 13.7 14.8 0 33 0s33 13.7 33 30.6c0 16.8-14.8 30.5-33 30.5zM36.5 41L28 32.2l-16.4 9 18-18.9 8.5 8.8 16.4-9-18 18.9z"></path>
-												</svg> </span> </a>
-										</li>
-									</ul>
+									<div data-component="share" class="submeta__share">
+										<ul class="social social--bottom js-social--bottom u-unstyled u-cf" data-component="social">
+											<li class="social__item social__item--facebook " data-link-name="facebook">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://www.facebook.com/dialog/share?app_id=180444840287&amp;href=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_fb" target="_blank" title="Facebook"> <span class="inline-icon__fallback button share-modal__item share-modal__item--facebook">Share on Facebook</span> <span class="inline-share-facebook inline-icon rounded-icon centered-icon social-icon social-icon--facebook">
+													<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--facebook__svg inline-share-facebook__svg inline-icon__svg">
+														<path d="M17.9 14h-3v8H12v-8h-2v-2.9h2V8.7C12 6.8 13.1 5 16 5c1.2 0 2 .1 2 .1v3h-1.8c-1 0-1.2.5-1.2 1.3v1.8h3l-.1 2.8z"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--twitter " data-link-name="twitter">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://twitter.com/intent/tweet?text=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_tw" target="_blank" title="Twitter"> <span class="inline-icon__fallback button share-modal__item share-modal__item--twitter">Share on Twitter</span> <span class="inline-share-twitter inline-icon rounded-icon centered-icon social-icon social-icon--twitter">
+													<svg width="32" height="32" viewBox="-2 -2 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--twitter__svg inline-share-twitter__svg inline-icon__svg">
+														<path d="M21.3 10.5v.5c0 4.7-3.5 10.1-9.9 10.1-2 0-3.8-.6-5.3-1.6.3 0 .6.1.8.1 1.6 0 3.1-.6 4.3-1.5-1.5 0-2.8-1-3.3-2.4.2 0 .4.1.7.1l.9-.1c-1.6-.3-2.8-1.8-2.8-3.5.5.3 1 .4 1.6.4-.9-.6-1.6-1.7-1.6-2.9 0-.6.2-1.3.5-1.8 1.7 2.1 4.3 3.6 7.2 3.7-.1-.3-.1-.5-.1-.8 0-2 1.6-3.5 3.5-3.5 1 0 1.9.4 2.5 1.1.8-.1 1.5-.4 2.2-.8-.3.8-.8 1.5-1.5 1.9.7-.1 1.4-.3 2-.5-.4.4-1 1-1.7 1.5z"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--email " data-link-name="email">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="mailto:?subject=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;body=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_link" target="_blank" title="Email"> <span class="inline-icon__fallback button share-modal__item share-modal__item--email">Share via Email</span> <span class="inline-share-email inline-icon rounded-icon centered-icon social-icon social-icon--email">
+													<svg width="32" height="32" viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--email__svg inline-share-email__svg inline-icon__svg">
+														<path d="M23.363 20.875H8.637v-8.938l6.545 5.687h1.637l6.544-5.687v8.938zm-1.635-9.75L16 16l-5.728-4.875h11.456zM23.363 9.5H8.637L7 11.125v9.75L8.637 22.5h14.727L25 20.875v-9.75L23.363 9.5z"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--linkedin " data-link-name="linkedin">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean&amp;url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="LinkedIn"> <span class=" u-h ">Share on LinkedIn</span> <span class="inline-share-linkedin inline-icon rounded-icon centered-icon social-icon social-icon--linkedin">
+													<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--linkedin__svg inline-share-linkedin__svg inline-icon__svg">
+														<path d="M10.576 7.985a1.57 1.57 0 0 1 0 3.137 1.568 1.568 0 0 1 0-3.137zm-1.353 4.327h2.706v8.704H9.223v-8.704zm4.403 0h2.595v1.19h.037c.361-.685 1.244-1.407 2.56-1.407 2.737 0 3.243 1.803 3.243 4.147v4.774h-2.702v-4.232c0-1.01-.02-2.308-1.406-2.308-1.408 0-1.623 1.1-1.623 2.235v4.305h-2.704v-8.704"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--pinterest " data-link-name="pinterest">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="http://www.pinterest.com/pin/find/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy" target="_blank" title="Pinterest"> <span class=" u-h ">Share on Pinterest</span> <span class="inline-share-pinterest inline-icon rounded-icon centered-icon social-icon social-icon--pinterest">
+													<svg viewBox="0 0 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--pinterest__svg inline-share-pinterest__svg inline-icon__svg">
+														<path d="M16.363 8C12.133 8 10 11.13 10 13.74c0 1.582.58 2.988 1.823 3.512.204.086.387.003.446-.23.04-.16.137-.568.18-.737.06-.23.037-.312-.127-.513-.36-.436-.588-1-.588-1.802 0-2.322 1.684-4.402 4.384-4.402 2.39 0 3.703 1.508 3.703 3.522 0 2.65-1.136 4.887-2.822 4.887-.93 0-1.628-.795-1.405-1.77.268-1.165.786-2.42.786-3.262 0-.752-.39-1.38-1.2-1.38-.952 0-1.716 1.017-1.716 2.38 0 .867.284 1.454.284 1.454l-1.146 5.006c-.34 1.487-.05 3.31-.026 3.493.014.108.15.134.21.05.09-.117 1.223-1.562 1.61-3.006.108-.41.625-2.526.625-2.526.31.61 1.215 1.145 2.176 1.145 2.862 0 4.804-2.693 4.804-6.298C22 10.54 19.763 8 16.363 8"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--gplus " data-link-name="gplus">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_gp&amp;amp;hl=en-GB&amp;amp;wwc=1" target="_blank" title="Google plus"> <span class=" u-h ">Share on Google+</span> <span class="inline-share-gplus inline-icon rounded-icon centered-icon social-icon social-icon--gplus">
+													<svg width="32" height="32" viewBox="4 -4 32 32" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--gplus__svg inline-share-gplus__svg inline-icon__svg">
+														<path d="M8.8 12c-.1 2.9 2 5.7 4.7 6.6 2.6.9 5.8.2 7.5-2 1.3-1.6 1.6-3.6 1.4-5.6h-6.7v2.4h4c-.3 1.2-1.1 2.2-2.3 2.7-2.3 1-5.1-.3-5.8-2.7-.9-2.3.5-5 2.9-5.7 1.4-.5 2.9.1 4.1.8l1.8-1.8c-1.4-1.2-3.2-1.9-5-1.7-3.6.1-6.8 3.4-6.6 7zm18-3v2h-2v2h2v2h2v-2h2v-2h-2V9h-2z"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--whatsapp " data-link-name="whatsapp">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="whatsapp://send?text=%22Refugees%20stranded%20for%2030%20hours%20before%20rescue%20in%20Mediterranean%22%20https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_wa" target="_blank" title="WhatsApp"> <span class=" u-h ">Share on WhatsApp</span> <span class="inline-share-whatsapp inline-icon rounded-icon centered-icon social-icon social-icon--whatsapp">
+													<svg width="30" height="30" viewBox="0 0 30 30" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--whatsapp__svg inline-share-whatsapp__svg inline-icon__svg">
+														<path d="M22.09 7.87a9.9 9.9 0 0 0-7.05-2.92c-5.49 0-9.96 4.47-9.96 9.96 0 1.75.46 3.47 1.33 4.98L5 25.04l5.28-1.38c1.45.79 3.09 1.21 4.76 1.21 5.49 0 9.96-4.47 9.96-9.96a9.92 9.92 0 0 0-2.91-7.04m-7.05 15.32c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.19 8.19 0 0 1-1.26-4.41c0-4.56 3.71-8.27 8.28-8.27 2.21 0 4.29.86 5.85 2.43a8.222 8.222 0 0 1 2.42 5.85c0 4.56-3.72 8.27-8.28 8.27m4.54-6.2c-.25-.12-1.47-.73-1.7-.81s-.39-.12-.56.12c-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23a7.283 7.283 0 0 1-1.38-1.72c-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.66.31-.22.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.57.12.17 1.75 2.68 4.25 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18s.21-1.08.14-1.18c-.06-.08-.23-.14-.48-.27"></path>
+													</svg> </span> </a>
+											</li>
+											<li class="social__item social__item--messenger " data-link-name="messenger">
+												<a class="social__action js-social__action--bottom social-icon-wrapper" data-link-name="social bottom" href="fb-messenger://share?link=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy%3FCMP%3Dshare_btn_me&amp;app_id=180444840287" target="_blank" title="Messenger"> <span class=" u-h ">Share on Messenger</span> <span class="inline-share-messenger inline-icon rounded-icon centered-icon social-icon social-icon--messenger">
+													<svg width="66" height="66" viewBox="-12 -12 90 90" class="rounded-icon__svg centered-icon__svg social-icon__svg social-icon--messenger__svg inline-share-messenger__svg inline-icon__svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M33 61.1c-3.6 0-7.1-.5-10.4-1.5L10.1 66V52.5C3.9 47 0 39.2 0 30.6 0 13.7 14.8 0 33 0s33 13.7 33 30.6c0 16.8-14.8 30.5-33 30.5zM36.5 41L28 32.2l-16.4 9 18-18.9 8.5 8.8 16.4-9-18 18.9z"></path>
+													</svg> </span> </a>
+											</li>
+										</ul>
+									</div>
+									<div class="submeta__syndication">
+										<ul class="syndication--bottom u-unstyled">
+											<li class="syndication__item">
+												
+											</li>
+										</ul>
+									</div>
 								</div>
-								<div class="submeta__syndication">
-									<ul class="syndication--bottom u-unstyled">
-										<li class="syndication__item">
-											<a class="syndication__action" data-link-name="meta-syndication-article" href="https://syndication.theguardian.com/automation/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2017%2Fapr%2F21%2Frefugees-stranded-mediterranean-dinghy&amp;type=article&amp;internalpagecode=3404727" target="_blank" title="Reuse this content"> <span class="syndication__link button button--syndication-reprint button--small">Reuse this content</span> </a>
-										</li>
-									</ul>
-								</div>
+								<div class="after-article js-after-article"></div>
 							</div>
-							<div class="after-article js-after-article"></div>
-						</div>
-						<div class="content__secondary-column js-secondary-column" aria-hidden="true">
-							<div class="ad-slot-container"></div>
-							<div class="js-components-container">
-								<div class="js-right-most-popular right-most-popular right-most-popular--image component--rhc hide-on-childrens-books-site" data-component="geo-most-popular" data-importance="-1" data-test-id="right-most-popular">
-									<h3 class="content__meta-heading">More from the series</h3>
-									<ul class="right-most-popular__items u-unstyled" data-link-name="Right hand most popular geo US">
-										<li class="right-most-popular-item" data-link-name="trail | 1">
-											<a class="right-most-popular-item__url media u-cf" href="http://www.columbia.edu/~ra2854/BuffaloFinalProject.html">
-											<div class="right-most-popular-item__img media__img">
-												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/983fef27fd1cc071b8eb1a8bf81cfeea4666083b/0_235_2558_1534/master/2558.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=1afa788fed19356f3cbe690fcca51b75" alt=""> -->
-												<img src="http://www.columbia.edu/~ra2854/West%20Side%20Bazaar/West%20Side%20Bazaar.jpg" width="150px" height="100px" alt="">
+							<div class="content__secondary-column js-secondary-column" aria-hidden="true">
+								<div class="ad-slot-container"></div>
+								<div class="js-components-container">
+									<div class="js-right-most-popular right-most-popular right-most-popular--image component--rhc hide-on-childrens-books-site" data-component="geo-most-popular" data-importance="-1" data-test-id="right-most-popular">
+										<h3 class="content__meta-heading">More from the series</h3>
+										<ul class="right-most-popular__items u-unstyled" data-link-name="Right hand most popular geo US">
+											<li class="right-most-popular-item" data-link-name="trail | 1">
+												<a class="right-most-popular-item__url media u-cf" href="http://www.columbia.edu/~ra2854/BuffaloFinalProject.html">
+												<div class="right-most-popular-item__img media__img">
+													<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/983fef27fd1cc071b8eb1a8bf81cfeea4666083b/0_235_2558_1534/master/2558.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=1afa788fed19356f3cbe690fcca51b75" alt=""> -->
+													<img src="http://www.columbia.edu/~ra2854/West%20Side%20Bazaar/West%20Side%20Bazaar.jpg" width="150px" height="100px" alt="">
+												</div>
+												<div class="media__body">
+													<h4 class="right-most-popular-item__headline">Buffalo looks to expand refugee economies</h4>
+												</div> </a>
+											</li>
 
-											</div>
-											<div class="media__body">
-												<h4 class="right-most-popular-item__headline">Buffalo looks to expand refugee economies</h4>
-											</div> </a>
-										</li>
-										
-										<br>
-										<li class="right-most-popular-item" data-link-name="trail | 2">
-											<a class="right-most-popular-item__url media u-cf" href="http://www.columbia.edu/~ra2854/my_story.html">
-											<div class="right-most-popular-item__img media__img">
-												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/eb66faea5f2573143c25b03ad0e571499f267334/0_267_4000_2400/master/4000.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=a7f0ed09968af9212b47ccc1756b2ca8" alt=""> -->
-												<img src="http://www.columbia.edu/~ra2854/SouthSudanese.jpg" width="150px" height="80px" alt="">
+											<br>
+											<li class="right-most-popular-item" data-link-name="trail | 2">
+												<a class="right-most-popular-item__url media u-cf" href="http://www.columbia.edu/~ra2854/my_story.html">
+												<div class="right-most-popular-item__img media__img">
+													<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/eb66faea5f2573143c25b03ad0e571499f267334/0_267_4000_2400/master/4000.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=a7f0ed09968af9212b47ccc1756b2ca8" alt=""> -->
+													<img src="http://www.columbia.edu/~ra2854/SouthSudanese.jpg" width="150px" height="80px" alt="">
 
-											</div>
-											
-									<!-- Adding the <br></br> tag here helps keep the mini boxes separate. Without this tag, it was all clumped together and looked
-										a little ugly. So just remember to use the <br></br> tag in between the the <div>s -->		
-											
-											
-											<div class="media__body">
-												<h4 class="right-most-popular-item__headline">Uganda: Fragile location, robust practice </h4>
-											</div> </a>
-										</li>
-										
-										<br>
-										<li class="right-most-popular-item" data-link-name="trail | 3">
-											<a class="right-most-popular-item__url media u-cf" href="http://www.columbia.edu/~ra2854/LandingPagePic.JPG" width="150px" height "100px">
-											<div class="right-most-popular-item__img media__img">
-												<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/8dfb2d1aede30fb85f577f0a37aabbe37f7d67dd/0_149_4457_2674/master/4457.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=d4fb569cd332498881d995a8168f74b3" alt=""> -->
-												<img src="http://www.columbia.edu/~ra2854/LandingPagePic.JPG" width="150px" height="100px">
+												</div> <!-- Adding the <br></br> tag here helps keep the mini boxes separate. Without this tag, it was all clumped together and looked
+												a little ugly. So just remember to use the <br></br> tag in between the the <div>s -->
+												<div class="media__body">
+													<h4 class="right-most-popular-item__headline">Uganda: Fragile location, robust practice </h4>
+												</div> </a>
+											</li>
 
-											</div>
-											</br>
-											<div class="media__body">
-												<h4 class="right-most-popular-item__headline">Series: Lives in transit</h4>
-											</div> </a>
-										</li>
+											<br>
+											<li class="right-most-popular-item" data-link-name="trail | 3">
+												<a class="right-most-popular-item__url media u-cf" href="http://www.columbia.edu/~ra2854/LandingPagePic.JPG" width="150px" height "100px">
+												<div class="right-most-popular-item__img media__img">
+													<!-- <img class="responsiveimg" src="https://i.guim.co.uk/img/media/8dfb2d1aede30fb85f577f0a37aabbe37f7d67dd/0_149_4457_2674/master/4457.jpg?w=300&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=d4fb569cd332498881d995a8168f74b3" alt=""> -->
+													<img src="http://www.columbia.edu/~ra2854/LandingPagePic.JPG" width="150px" height="100px">
 
-									
-									</ul>
+												</div> </br>
+												<div class="media__body">
+													<h4 class="right-most-popular-item__headline">Series: Lives in transit</h4>
+												</div> </a>
+											</li>
+
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 			</article>
 			<div class="ad_unit" style="position: absolute; left: 0px; top: 0px; height: 10px; z-index: -1;">
 				&nbsp;
