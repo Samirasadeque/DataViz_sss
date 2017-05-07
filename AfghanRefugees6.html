@@ -54,154 +54,7 @@
 
 		<!-- This is where I will add my code for the visualization.  -->
 
-		<!-- leaving this code for a bar chart as a comment here just in case I need to use it:
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
-		google.charts.load('current', {'packages':['bar']});
-
-		google.charts.setOnLoadCallback(ChartRefgRepatriation);
-
-		/*When the code has been loaded,
-		* Execute the function below to draw the second column chart*/
-
-		function ChartRefgRepatriation() {
-		/*Use the  Google library to create the visualization
-		*Make a data table with variable name which indicates the data for the number of resettlement of Vietnamese refugees
-		in host countries across the globe*/
-
-		var RefgPopnRepatr = new google.visualization.arrayToDataTable([
-		['Year', 'Total Refugees', 'Total Repatriated'],
-		          ['1979', 400000, 0],
-		          ['1980', 1428230, 0],
-		          ['1981', 2375330, 0],
-		          ['1982', 2877480, 0],
-		          ['1983', 2900000, 0],
-		          ['1984', 2500000, 0],
-		          ['1985', 2729910, 0],
-		          ['1986', 2878100, 0],
-		          ['1987', 3156000, 0],
-		          ['1988', 3254393, 0],
-		          ['1989', 3272290, 0],
-		          ['1990', 3253000, 19290],
-		          ['1991', 3098000, 175000],
-		['1992', 1627000, 1360000],
-		['1993', 1476876, 0],
-		['1994', 1053000, 102658],
-		['1995', 1200000, 153274],
-		['1996', 1200000, 140390],
-		 ['1997', 1200000, 84500],
-		['1998', 1200000, 93000],
-		['1999', 1200000, 91834],
-		['2000', 2000000, 76773],
-		['2001', 2197821, 8000],
-		['2002', 1226569, 1569248],
-		['2003', 1123647, 375526],
-		['2004', 1290408, 424477],
-		['2005', 1084208, 461118],
-		['2006', 1043984, 143019],
-		['2007', 2034416, 365663],
-		['2008', 1780150, 274200],
-		['2009', 1739935, 51290],
-		['2010', 1899842, 109383],
-		['2011', 1701945, 52096],
-		['2012', 1637740, 83423],
-		['2013', 1615876, 31224],
-		['2014', 1504912, 12991],
-		['2015', 1560592, 58211],
-		          ]);
-
-		/*Customize this column bar chart to add title, width and height*/
-
-		var RefgPopnRepatr_ChartStyle = {'title':'More than 10,000 refugees resttled in Buffalo since 2002',
-		'width':700,
-		'height':400
-		};
-		/* Create a variable that will call the data being fed in the columns and rows of the column chart */
-
-		var RefgPopnRepatr_ChartFinal = new google.charts.Bar(document.getElementById('RefgPopnRepatr_ChartID'));
-
-		/*Execute the column chart*/
-		RefgPopnRepatr_ChartFinal.draw(RefgPopnRepatr, google.charts.Bar.convertOptions(RefgPopnRepatr_ChartStyle));
-		/* End of drawChart function*/
-		}
-		    
-		</script> -->
-		<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-		<!-- <script type="text/javascript">
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawLineChart);
-
-function drawLineChart() {
-var RefgInfo = google.visualization.arrayToDataTable([
-['Year', 'Refugee Population', 'Refugee Repatriation'],
-['1979', 400000, 0],
-['1980', 1428230, 0],
-['1981', 2375330, 0],
-['1982', 2877480, 0],
-['1983', 2900000, 0],
-['1984', 2500000, 0],
-['1985', 2729910, 0],
-['1986', 2878100, 0],
-['1987', 3156000, 0],
-['1988', 3254393, 0],
-['1989', 3272290, 0],
-['1990', 3253000, 19290],
-['1991', 3098000, 175000],
-['1992', 1627000, 1360000],
-['1993', 1476876, 0],
-['1994', 1053000, 102658],
-['1995', 1200000, 153274],
-['1996', 1200000, 140390],
-['1997', 1200000, 84500],
-['1998', 1200000, 93000],
-['1999', 1200000, 91834],
-['2000', 2000000, 76773],
-['2001', 2197821, 8000],
-['2002', 1226569, 1569248],
-['2003', 1123647, 375526],
-['2004', 1290408, 424477],
-['2005', 1084208, 461118],
-['2006', 1043984, 143019],
-['2007', 2034416, 365663],
-['2008', 1780150, 274200],
-['2009', 1739935, 51290],
-['2010', 1899842, 109383],
-['2011', 1701945, 52096],
-['2012', 1637740, 83423],
-['2013', 1615876, 31224],
-['2014', 1504912, 12991],
-['2015', 1560592, 58211],
-]);
-
-var LineChartFeatures = {
-title: 'How the refugee population has been changing over the years in Pakistan',
-curveType: 'function',
-colors : ['#e6550d', '#2b8cbe'],
-legend: { position: 'bottom' }
-};
-
-var chart = new google.visualization.LineChart(document.getElementById('RefgLineChart'));
-
-chart.draw(RefgInfo, LineChartFeatures);
-}
-		</script> -->
-
-		<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-		<!-- <script type="text/javascript">
-			google.charts.load('current', {
-				'packages' : ['corechart']
-			});
-			google.charts.setOnLoadCallback(drawPieChart);
-			function drawPieChart() {
-				var PieChartInfo = google.visualization.arrayToDataTable([['Refugees Repatriating', 'Provinces'], ['KP', 308516], ['Punjab', 38088], ['Balochistan', 26661], ['Sindh', 3808], ['Islamabad', 3808]]);
-				var PieChartFeatures = {
-					title : 'Percentage of refugees repatriating in 2016 by province',
-					colors : ['#016c59', '#1c9099', '#67a9cf', '#bdc9e1', '#f6eff7']
-				};
-				var chart = new google.visualization.PieChart(document.getElementById('RepatriationPieChart'));
-				chart.draw(PieChartInfo, PieChartFeatures);
-			}
-		</script> -->
+		
 
 		<style class="js-loggable">
 			.svg .i, .svg .caption:before, .svg figcaption:before, .svg blockquote.quoted:before {
@@ -1067,14 +920,7 @@ chart.draw(RefgInfo, LineChartFeatures);
 								<!-- deleteing the <p></p> here that had the first few lines of the article because it was for some reason pasted here. Why would that be? A bit
 								confusing. Anyway, deleted that -->
 
-								<div class="row">
-
-									<div class="col-md-6">
-
-										<div id="DesignChart_TotalResettlement"></div>
-
-									</div>
-								</div>
+							
 
 								<p>
 									Last August, at the crack of dawn on the day after Pakistan celebrated its 68th anniversary of independence, Nowshad Asghar and his extended family of 19 got on a bus in Peshawar with their belongings and took off. </p>
@@ -1185,6 +1031,13 @@ In Pakistan, says Asghar, the children in his family went to school regularly. A
 								<p> “It’s a good thing that refugees are returning to their own home, we’re happy about that,” he says. “But the problem is that we can’t provide them with even the basic needs such as education.”</p>
 
 								<p> “Our children are just passing their times, these teachers are also not focusing on their children,” says Asghar. He says there aren’t enough rooms, books, or even pencils for the children at the schools. </p>
+
+
+<p> <img src="http://www.columbia.edu/~sss2256/RefugeeChildrenSchoolsFINAL.png" width = "600" height = "400">
+								<figcaption class="caption caption--main caption--img" itemprop="description">
+								Source: Ahmad Ali, Nangarhar and Agency For Technical Cooperation and Development
+								</figcaption>
+								</p>
 
 								<p>Asghar’s five-year-old nephew Amanullah goes to school in Jalalabad now, but misses the facilities they had in Pakistan, such as transportation that picked and dropped the children to and from their school. Asghar has to take them to school on foot, a 20-minutes walk each way. 
 								</p>
